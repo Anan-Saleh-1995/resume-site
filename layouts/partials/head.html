@@ -2,5 +2,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 
+<script>
+  (() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+      document.documentElement.dataset.theme = storedTheme;
+    }
+  })();
+</script>
+
 {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />

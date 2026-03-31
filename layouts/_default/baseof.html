@@ -7,6 +7,35 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    {{ partial "language-switcher.html" . }} {{ block "main" . }}{{ end }}
+    <div class="site-controls">
+      {{ partial "theme-toggle.html" . }} {{ partial "language-switcher.html" .
+      }}
+    </div>
+    {{ block "main" . }}{{ end }}
+    <script>
+      (() => {
+        const button = document.querySelector('.theme-toggle');
+        if (!button) return;
+
+        const root = document.documentElement;
+
+        const getTheme = () => root.dataset.theme || 'system';
+
+        const updateLabel = () => {
+          const theme = getTheme();
+          button.textContent = theme === 'dark' ? 'Light' : 'Dark';
+        };
+
+        button.addEventListener('click', () => {
+          const current = getTheme();
+          const next = current === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          localStorage.setItem('theme', next);
+          updateLabel();
+        });
+
+        updateLabel();
+      })();
+    </script>
   </body>
 </html>
