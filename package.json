@@ -11,7 +11,20 @@
     "lint:md": "markdownlint-cli2 \"README.md\"",
     "lint:css": "stylelint \"assets/**/*.css\" --allow-empty-input",
     "lint": "npm run lint:md && npm.cmd run lint:css",
-    "validate": "npm run format:check && npm run lint && npm run build"
+    "validate": "npm run format:check && npm run lint && npm run build",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint-cli2",
+      "prettier --write"
+    ],
+    "*.{json,jsonc,toml,yml,yaml,css,js,cjs,mjs}": [
+      "prettier --write"
+    ],
+    "assets/**/*.css": [
+      "stylelint --fix"
+    ]
   },
   "keywords": [],
   "author": "",
