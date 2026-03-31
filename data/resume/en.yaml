@@ -1,0 +1,43 @@
+basics:
+  name: 'Anan'
+  title: 'Full-Stack Developer'
+  email: 'your@email.com'
+  phone: '+972-00-000-0000'
+  location: 'Israel'
+  website: 'https://example.com'
+  summary: >
+    Write a short professional summary here.
+
+links:
+  - label: 'GitHub'
+    url: 'https://github.com/yourname'
+  - label: 'LinkedIn'
+    url: 'https://linkedin.com/in/yourname'
+
+skills:
+  - name: 'JavaScript'
+  - name: 'Node.js'
+  - name: 'React'
+  - name: 'Hugo'
+
+experience:
+  - company: 'Company Name'
+    role: 'Senior Developer'
+    location: 'Remote'
+    start: '2023'
+    end: 'Present'
+    highlights:
+      - 'Built and maintained production web applications.'
+      - 'Collaborated across product and engineering.'
+
+education:
+  - institution: 'University Name'
+    degree: 'B.Sc. in Something'
+    start: '2018'
+    end: '2022'
+
+projects:
+  - name: 'Project Name'
+    url: 'https://example.com'
+    description: >
+      Short description of the project.

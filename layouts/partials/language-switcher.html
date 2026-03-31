@@ -1,0 +1,20 @@
+{{ if .IsTranslated }}
+<nav class="language-switcher" aria-label="Language switcher">
+  {{ range .AllTranslations }}
+  <a
+    href="{{ .RelPermalink }}"
+    {{
+    if
+    eq
+    .Language.Lang
+    $.Site.Language.Lang
+    }}aria-current="page"
+    {{
+    end
+    }}
+  >
+    {{ .Language.LanguageName }}
+  </a>
+  {{ end }}
+</nav>
+{{ end }}

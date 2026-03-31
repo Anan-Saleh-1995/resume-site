@@ -1,3 +1,21 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://example.org/"
+title = "Anan Resume"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+disableKinds = ["taxonomy", "term"]
+
+[languages]
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    languageDirection = "ltr"
+    weight = 1
+    title = "Anan Resume"
+
+  [languages.he]
+    languageCode = "he-IL"
+    languageName = "עברית"
+    languageDirection = "rtl"
+    weight = 2
+    title = "קורות החיים של ענן"

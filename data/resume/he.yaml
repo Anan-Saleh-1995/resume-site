@@ -1,0 +1,43 @@
+basics:
+  name: 'ענן'
+  title: 'מפתח פול סטאק'
+  email: 'your@email.com'
+  phone: '+972-00-000-0000'
+  location: 'ישראל'
+  website: 'https://example.com'
+  summary: >
+    כתוב כאן תקציר מקצועי קצר.
+
+links:
+  - label: 'גיטהאב'
+    url: 'https://github.com/yourname'
+  - label: 'לינקדאין'
+    url: 'https://linkedin.com/in/yourname'
+
+skills:
+  - name: 'JavaScript'
+  - name: 'Node.js'
+  - name: 'React'
+  - name: 'Hugo'
+
+experience:
+  - company: 'שם החברה'
+    role: 'מפתח בכיר'
+    location: 'מרחוק'
+    start: '2023'
+    end: 'היום'
+    highlights:
+      - 'פיתחתי ותחזקתי אפליקציות ווב בפרודקשן.'
+      - 'עבדתי בשיתוף פעולה עם צוותי מוצר והנדסה.'
+
+education:
+  - institution: 'שם האוניברסיטה'
+    degree: 'תואר ראשון בתחום כלשהו'
+    start: '2018'
+    end: '2022'
+
+projects:
+  - name: 'שם הפרויקט'
+    url: 'https://example.com'
+    description: >
+      תיאור קצר של הפרויקט.

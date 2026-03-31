@@ -1,0 +1,82 @@
+{{ $lang := .Site.Language.Lang }} {{ $resume := index hugo.Data.resume $lang }}
+<main>
+  <header class="resume-header">
+    <h1>{{ $resume.basics.name }}</h1>
+    <p class="resume-role">{{ $resume.basics.title }}</p>
+
+    <div class="resume-meta">
+      <span>{{ $resume.basics.location }}</span>
+      <span>{{ $resume.basics.email }}</span>
+      <span>{{ $resume.basics.phone }}</span>
+      <a href="{{ $resume.basics.website }}">{{ $resume.basics.website }}</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>{{ i18n "summary" }}</h2>
+    <p>{{ $resume.basics.summary }}</p>
+  </section>
+
+  <section>
+    <h2>{{ i18n "links" }}</h2>
+    <ul class="link-list">
+      {{ range $resume.links }}
+      <li><a href="{{ .url }}">{{ .label }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section>
+    <h2>{{ i18n "skills" }}</h2>
+    <ul class="skills-list">
+      {{ range $resume.skills }}
+      <li>{{ .name }}</li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section>
+    <h2>{{ i18n "experience" }}</h2>
+    {{ range $resume.experience }}
+    <article class="resume-entry">
+      <div class="resume-entry-heading">
+        <h3>{{ .role }}</h3>
+        <p class="resume-entry-org">{{ .company }}</p>
+      </div>
+      <p class="resume-entry-meta">
+        {{ .location }} | {{ .start }} - {{ .end }}
+      </p>
+      <ul>
+        {{ range .highlights }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </article>
+    {{ end }}
+  </section>
+
+  <section>
+    <h2>{{ i18n "education" }}</h2>
+    {{ range $resume.education }}
+    <article class="resume-entry">
+      <div class="resume-entry-heading">
+        <h3>{{ .degree }}</h3>
+        <p class="resume-entry-org">{{ .institution }}</p>
+      </div>
+      <p class="resume-entry-meta">{{ .start }} - {{ .end }}</p>
+    </article>
+    {{ end }}
+  </section>
+
+  <section>
+    <h2>{{ i18n "projects" }}</h2>
+    {{ range $resume.projects }}
+    <article class="resume-entry">
+      <div class="resume-entry-heading">
+        <h3><a href="{{ .url }}">{{ .name }}</a></h3>
+      </div>
+      <p>{{ .description }}</p>
+    </article>
+    {{ end }}
+  </section>
+</main>
