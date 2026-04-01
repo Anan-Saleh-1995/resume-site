@@ -1,19 +1,19 @@
-[dir='rtl'] .resume-entry-heading {
+[dir='rtl'] .template-classic .resume-entry-heading {
   justify-content: flex-start;
 }
 
-[dir='rtl'] .resume-entry-meta,
-[dir='rtl'] .resume-contact-list,
-[dir='rtl'] p,
-[dir='rtl'] li {
+[dir='rtl'] .template-classic .resume-entry-meta,
+[dir='rtl'] .template-classic .resume-contact-list,
+[dir='rtl'] .template-classic p,
+[dir='rtl'] .template-classic li {
   unicode-bidi: plaintext;
 }
 
-[dir='rtl'] .skills-list li {
+[dir='rtl'] .template-classic .skills-list li {
   text-align: right;
   unicode-bidi: normal;
 }
 
-[dir='rtl'] .skills-list .skills-line {
+[dir='rtl'] .template-classic .skills-list .skills-line {
   text-align: right;
 }

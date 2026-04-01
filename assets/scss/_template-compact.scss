@@ -1,0 +1,22 @@
+main.template-compact {
+  width: min(100% - 2rem, 860px);
+  padding: var(--space-5);
+
+  .resume-header {
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
+
+    h1 {
+      margin-bottom: var(--space-3);
+      font-size: 2rem;
+    }
+  }
+
+  .resume-contact-list {
+    font-size: 0.88rem;
+  }
+
+  section {
+    margin-top: var(--space-5);
+  }
+}

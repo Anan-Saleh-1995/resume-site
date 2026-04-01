@@ -1,20 +1,16 @@
 @media (max-width: 640px) {
-  main {
+  main.template-classic {
     width: min(100% - 1rem, 980px);
     margin: 4.5rem auto var(--space-4);
     padding: var(--space-4);
     border-radius: 12px;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  .resume-header h1 {
+  .template-classic .resume-header h1 {
     font-size: 1.9rem;
   }
 
-  .resume-contact-list {
+  .template-classic .resume-contact-list {
     justify-content: center;
     row-gap: 0.35rem;
   }
@@ -34,7 +30,7 @@
     font-size: 0.82rem;
   }
 
-  .skills-list li {
+  .template-classic .skills-list li {
     white-space: normal;
   }
 }

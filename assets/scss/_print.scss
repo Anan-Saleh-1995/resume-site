@@ -11,7 +11,7 @@
     font-size: 12px;
   }
 
-  main {
+  main.template-classic {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -24,21 +24,21 @@
     display: none;
   }
 
-  section {
+  .template-classic section {
     margin-top: 1rem;
     break-inside: avoid;
   }
 
-  .resume-entry {
+  .template-classic .resume-entry {
     break-inside: avoid;
   }
 
-  .skills-list li {
+  .template-classic .skills-list li {
     background: transparent;
     padding: 0;
   }
 
-  h1 {
+  .template-classic h1 {
     font-size: 2rem;
   }
 
