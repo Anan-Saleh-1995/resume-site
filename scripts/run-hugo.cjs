@@ -28,6 +28,11 @@ if (fs.existsSync(envPath)) {
 }
 
 const mode = process.argv[2];
+const resolvedBaseUrl = env.HUGO_BASEURL
+  ? env.HUGO_BASEURL
+  : env.VERCEL_URL
+    ? `https://${env.VERCEL_URL}/`
+    : '';
 
 const run = (command, args) => {
   const result = spawnSync(command, args, {
@@ -47,5 +52,11 @@ run('npm', ['run', 'build:css']);
 if (mode === 'dev') {
   run('hugo', ['server']);
 } else {
-  run('hugo', []);
+  const args = [];
+
+  if (resolvedBaseUrl) {
+    args.push('--baseURL', resolvedBaseUrl);
+  }
+
+  run('hugo', args);
 }
