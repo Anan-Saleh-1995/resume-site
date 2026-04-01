@@ -1,3 +1,8 @@
-<button class="theme-toggle" type="button" aria-label="Toggle color theme">
-  Theme
+<button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+  <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">
+    {{ partial "icons/sun.html" . }}
+  </span>
+  <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">
+    {{ partial "icons/moon.html" . }}
+  </span>
 </button>

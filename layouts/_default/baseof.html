@@ -23,7 +23,10 @@
 
         const updateLabel = () => {
           const theme = getTheme();
-          button.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          button.setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode',
+          );
         };
 
         button.addEventListener('click', () => {
