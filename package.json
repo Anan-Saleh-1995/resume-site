@@ -20,7 +20,7 @@
       "markdownlint-cli2",
       "prettier --write"
     ],
-    "*.{json,jsonc,toml,yml,yaml,css,scss,js,cjs,mjs}": [
+    "*.{json,jsonc,yml,yaml,css,scss,js,cjs,mjs}": [
       "prettier --write"
     ],
     "assets/**/*.scss": [
