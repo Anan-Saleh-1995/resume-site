@@ -1,97 +1,86 @@
 basics:
   name: 'Anan'
   title: 'Full-Stack Developer'
-  location: 'Israel'
-  summary: >
-    Write a short professional summary here.
-  email: 'your@email.com'
-  phone: '+972-00-000-0000'
-  website:
-    label: 'example.com'
-    url: 'https://example.com'
-  linkedin:
-    label: 'LinkedIn'
-    url: 'https://linkedin.com/in/yourname'
-  github:
-    label: 'GitHub'
-    url: 'https://github.com/yourname'
+  email: 'anansaleh18@gmail.com'
+  phone: '052-247-1407'
+
+summary: >
+  Full-stack developer with 3 years of experience building and maintaining production web applications with React, Meteor, Node.js, MongoDB, and AWS. Delivered end-to-end features including 2FA, secure AWS S3 upload flows, role-based access strategies, cron-based automation, and performance improvements such as server-side pagination for data-heavy screens.
 
 skills:
-  - items:
+  - label: 'Frontend'
+    items:
+      - 'React'
       - 'TypeScript'
       - 'JavaScript'
+      - 'HTML'
+      - 'CSS'
+      - 'Vite'
+  - label: 'Backend'
+    items:
       - 'Node.js'
       - 'Express'
       - 'NestJS'
-      - 'React'
-      - 'Vite'
       - 'REST APIs'
       - 'OpenAPI'
       - 'Swagger'
-  - items:
-      - 'MongoDB'
-      - 'Mongoose'
+      - 'Authentication'
+  - label: 'Data Layer'
+    items:
       - 'MySQL'
-      - 'Knex'
+      - 'SQL'
+      - 'MongoDB'
       - 'Prisma'
-      - 'Supabase'
       - 'Redis'
-      - 'Passport'
-      - 'Zod'
-      - 'Joi'
-  - items:
+  - label: 'Cloud / DevOps'
+    items:
+      - 'Docker'
+      - 'Docker Compose'
+      - 'AWS EC2'
+      - 'AWS S3'
+      - 'AWS IAM'
+      - 'Linux'
+  - label: 'Quality / Workflow'
+    items:
       - 'Jest'
       - 'Vitest'
       - 'Supertest'
-      - 'Unit Testing'
       - 'Integration Testing'
-      - 'ESLint'
-      - 'Prettier'
-      - 'Docker'
-      - 'Docker Compose'
-      - 'Prometheus'
-      - 'Grafana'
-      - 'AWS S3'
-      - 'EC2'
-      - 'IAM'
-  - items:
-      - 'Linux'
-      - 'WSL'
-      - 'Bash'
-      - 'PowerShell'
       - 'Git'
-      - 'GitHub'
-      - 'Bitbucket'
-      - 'SSH'
-      - 'Postman'
       - 'Jira'
-      - 'DocsJS'
+      - 'Agile'
 
 experience:
-  - company: 'Company Name'
-    role: 'Senior Developer'
-    location: 'Remote'
-    start: '2023'
-    end: 'Present'
+  - company: 'Plasbit Ltd'
+    role: 'Full-Stack Developer'
+    location: 'Yokneam, Israel'
+    start: 'Jan 2022'
+    end: 'Mar 2025'
     highlights:
-      - 'Built and maintained production web applications.'
-      - 'Collaborated across product and engineering.'
-
-education:
-  - institution: 'University Name'
-    degree: 'B.Sc. in Something'
-    start: '2018'
-    end: '2022'
+      - 'Built and maintained production features for plasbit.com and app.plasbit.com across React, Meteor, Node.js, and MongoDB.'
+      - 'Owned secure AWS S3 upload flows end-to-end, including structured storage paths, server-side file validation, backend upload handling, and signed-URL-based file access.'
+      - 'Implemented 2FA, passwordless email-token login flows, token validation and reuse protection, and role-based access strategies, including environment-driven separation of admin and user components across dedicated EC2 deployments.'
+      - 'Improved responsiveness on data-heavy screens in app.plasbit.com by introducing server-side pagination and reducing client-side load.'
+      - 'Built a scheduled sitemap service that scanned new content, generated segmented XML and image sitemaps, uploaded them to AWS S3, and invalidated CDN cache to keep indexed content current.'
+      - 'Developed backend API endpoints and utility-level tests, reviewed code from outsourced developers, and helped enforce consistent code styling standards across the team.'
 
 projects:
-  - name: 'Project Name'
-    url: 'https://example.com'
-    description: >
-      Short description of the project.
+  - name: 'Travel Guide Platform'
+    start: '2025'
+    end: 'Present'
+    highlights:
+      - 'Building a private multi-role travel platform for solo travelers and local guides in React, Node.js, and Express with MySQL, Knex, and Redis.'
+      - 'Implemented MFA, secure AWS S3 photo uploads, PayPal webhooks, and Docker-based local infrastructure with Prometheus and Grafana monitoring.'
+
+education:
+  - institution: 'Technion National School for Practical Engineers'
+    degree: 'Practical Software Engineering Diploma'
+    start: 'Oct 2016'
+    end: 'Dec 2018'
 
 languages:
   - name: 'Arabic'
-    level: 'Mother language'
+    level: 'Native'
   - name: 'Hebrew'
     level: 'Fluent'
   - name: 'English'

@@ -1,98 +1,87 @@
 basics:
   name: 'ענן'
-  title: 'מפתח פול סטאק'
-  location: 'ישראל'
-  summary: >
-    כתוב כאן תקציר מקצועי קצר.
-  email: 'your@email.com'
-  phone: '+972-00-000-0000'
-  website:
-    label: 'example.com'
-    url: 'https://example.com'
-  linkedin:
-    label: 'לינקדאין'
-    url: 'https://linkedin.com/in/yourname'
-  github:
-    label: 'GitHub'
-    url: 'https://github.com/yourname'
+  title: 'מפתח פול-סטאק'
+  email: 'anansaleh18@gmail.com'
+  phone: '052-247-1407'
+
+summary: >
+  מפתח פול-סטאק עם 3 שנות ניסיון בפיתוח ותחזוקה של אפליקציות web בפרודקשן, בעבודה עם React, Meteor, Node.js, MongoDB ו-AWS. ניסיון בפיתוח פיצ'רים מקצה לקצה, כולל 2FA, העלאות קבצים מאובטחות ל-AWS S3, מנגנוני הרשאות מבוססי תפקידים, אוטומציות מבוססות cron ושיפורי ביצועים כמו פג'ינציה בצד השרת למסכים עתירי נתונים.
 
 skills:
-  - items:
+  - label: 'צד לקוח'
+    items:
+      - 'React'
       - 'TypeScript'
       - 'JavaScript'
+      - 'HTML'
+      - 'CSS'
+      - 'Vite'
+  - label: 'צד שרת'
+    items:
       - 'Node.js'
       - 'Express'
       - 'NestJS'
-      - 'React'
-      - 'Vite'
       - 'REST APIs'
       - 'OpenAPI'
       - 'Swagger'
-  - items:
-      - 'MongoDB'
-      - 'Mongoose'
+      - 'Authentication'
+  - label: 'שכבת נתונים'
+    items:
       - 'MySQL'
-      - 'Knex'
+      - 'SQL'
+      - 'MongoDB'
       - 'Prisma'
-      - 'Supabase'
       - 'Redis'
-      - 'Passport'
-      - 'Zod'
-      - 'Joi'
-  - items:
+  - label: 'ענן ו-DevOps'
+    items:
+      - 'Docker'
+      - 'Docker Compose'
+      - 'AWS EC2'
+      - 'AWS S3'
+      - 'AWS IAM'
+      - 'Linux'
+  - label: 'בדיקות ותהליך עבודה'
+    items:
       - 'Jest'
       - 'Vitest'
       - 'Supertest'
-      - 'Unit Testing'
       - 'Integration Testing'
-      - 'ESLint'
-      - 'Prettier'
-      - 'Docker'
-      - 'Docker Compose'
-      - 'Prometheus'
-      - 'Grafana'
-      - 'AWS S3'
-      - 'EC2'
-      - 'IAM'
-  - items:
-      - 'Linux'
-      - 'WSL'
-      - 'Bash'
-      - 'PowerShell'
       - 'Git'
-      - 'GitHub'
-      - 'Bitbucket'
-      - 'SSH'
-      - 'Postman'
       - 'Jira'
-      - 'DocsJS'
+      - 'Agile'
 
 experience:
-  - company: 'שם החברה'
-    role: 'מפתח בכיר'
-    location: 'מרחוק'
-    start: '2023'
-    end: 'היום'
+  - company: 'Plasbit Ltd'
+    role: 'מפתח פול-סטאק'
+    location: 'יקנעם, ישראל'
+    start: '01/2022'
+    end: '03/2025'
     highlights:
-      - 'פיתחתי ותחזקתי אפליקציות ווב בפרודקשן.'
-      - 'עבדתי בשיתוף פעולה עם צוותי מוצר והנדסה.'
-
-education:
-  - institution: 'שם האוניברסיטה'
-    degree: 'תואר ראשון בתחום כלשהו'
-    start: '2018'
-    end: '2022'
+      - "פיתוח ותחזוקה של פיצ'רים בפרודקשן עבור plasbit.com ו-app.plasbit.com, בסביבת React, Meteor, Node.js ו-MongoDB."
+      - 'הובלת תהליך העלאות קבצים מאובטחות ל-AWS S3 מקצה לקצה, כולל מבנה נתיבים מסודר, ולידציה בצד השרת, טיפול בתהליך ההעלאה וגישה לקבצים באמצעות קישורים חתומים.'
+      - 'מימוש 2FA ותהליכי כניסה מבוססי email token, כולל אימות טוקנים, מניעת שימוש חוזר בקודים ומנגנוני הרשאות מבוססי תפקידים, לצד הפרדה מבוססת env בין רכיבי admin לרכיבי user על גבי שרתי EC2 ייעודיים.'
+      - "שיפור הביצועים של מסכים עתירי נתונים ב-app.plasbit.com באמצעות פג'ינציה בצד השרת והפחתת עומס בצד הלקוח."
+      - 'בניית שירות sitemap מתוזמן שסורק תוכן חדש, מייצר קובצי XML וקובצי image sitemap מפוצלים, מעלה אותם ל-AWS S3 ומבצע invalidation ל-CDN כדי לשמור על תוכן מעודכן באינדוקס.'
+      - 'פיתוח endpoints ל-API, כתיבת בדיקות לפונקציות וללוגיקה פנימית, ביצוע code reviews למפתחים חיצוניים והטמעת סטנדרטים עקביים של code styling בצוות.'
 
 projects:
-  - name: 'שם הפרויקט'
-    url: 'https://example.com'
-    description: >
-      תיאור קצר של הפרויקט.
+  - name: 'Travel Guide Platform'
+    start: '2025'
+    end: 'כיום'
+    highlights:
+      - 'פיתוח פלטפורמת travel פרטית למטיילי סולו ולמדריכים מקומיים ב-React, Node.js ו-Express עם MySQL, Knex ו-Redis, עבור חוויות נפרדות למטיילים, מדריכים ו-admin.'
+      - 'מימוש MFA, העלאות תמונות מאובטחות ל-AWS S3, אינטגרציית PayPal עם webhooks ותשתיות Docker עם Prometheus ו-Grafana לניטור.'
+
+education:
+  - institution: 'בית הספר הארצי להנדסאים בטכניון'
+    degree: 'הנדסאי תוכנה'
+    start: '10/2016'
+    end: '12/2018'
 
 languages:
   - name: 'ערבית'
     level: 'שפת אם'
   - name: 'עברית'
-    level: 'שוטף'
+    level: 'שוטפת'
   - name: 'אנגלית'
-    level: 'שוטף'
+    level: 'שוטפת'

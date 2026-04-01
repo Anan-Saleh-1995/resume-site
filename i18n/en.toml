@@ -2,16 +2,16 @@
 other = "Summary"
 
 [skills]
-other = "Skills"
+other = "Technical Skills"
 
 [experience]
-other = "Experience"
+other = "Professional Experience"
 
 [education]
 other = "Education"
 
 [projects]
-other = "Projects"
+other = "Selected Project"
 
 [languages]
 other = "Languages"
