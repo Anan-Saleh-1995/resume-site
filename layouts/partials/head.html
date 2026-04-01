@@ -3,14 +3,7 @@
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 <link rel="icon" href='{{ "favicon.svg" | relURL }}' type="image/svg+xml" />
 
-<script>
-  (() => {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'light' || storedTheme === 'dark') {
-      document.documentElement.dataset.theme = storedTheme;
-    }
-  })();
-</script>
-
-{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+{{ $styles := resources.Get "css/main.css" | minify | fingerprint }} {{
+$siteScript := resources.Get "js/site.js" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+<script src="{{ $siteScript.RelPermalink }}"></script>

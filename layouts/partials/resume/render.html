@@ -1,3 +1,6 @@
-{{ $resolved := partial "resume/resolve.html" . }}
+{{ $resolved := .Scratch.Get "resumeResolved" }}
+{{ if not $resolved }}
+  {{ $resolved = partial "resume/resolve.html" . }}
+{{ end }}
 
 {{ partial $resolved.templatePartial $resolved }}

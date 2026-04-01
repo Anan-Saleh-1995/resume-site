@@ -243,6 +243,46 @@ Production build:
 
     npm run build
 
+## Local Environment
+
+Local builds can read values from `.env`.
+
+An example file is included at:
+
+- `.env.example`
+
+Useful variables:
+
+- `HUGO_SHOW_PRIVATE_CONTACT`
+- `HUGO_BASEURL`
+- `HUGO_VERSION`
+
+Recommended pattern:
+
+- local/private builds:
+  - `HUGO_SHOW_PRIVATE_CONTACT=true`
+- public hosted builds:
+  - `HUGO_SHOW_PRIVATE_CONTACT=false`
+
+`npm run dev` and `npm run build` load `.env` through `scripts/run-hugo.cjs`.
+
+## Deployment
+
+This repo is prepared for Vercel deployment.
+
+Project-level deploy settings:
+
+- Framework preset: `Hugo`
+- Build command: `npm run build`
+- Output directory: `public`
+
+Recommended Vercel environment variables:
+
+- `HUGO_SHOW_PRIVATE_CONTACT=false`
+- `HUGO_VERSION=0.159.1`
+
+`vercel.json` keeps the expected build/output settings in the repo so deployment does not rely only on dashboard memory.
+
 ## Theme and Language Behavior
 
 - Language switching is handled by Hugo multilingual configuration
@@ -295,8 +335,7 @@ Implemented:
 
 Still possible to add later:
 
-- GitHub Pages deployment
-- GitHub Actions CI
+- CI checks in hosted pull requests
 - Dependabot
 - more resume templates
 - more job-targeted resume variants

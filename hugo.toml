@@ -20,4 +20,4 @@ disableKinds = ["taxonomy", "term"]
     languageDirection = "rtl"
     contentDir = "content/he"
     weight = 2
-    title = "קורות החיים של ענן"
+    title = "קורות החיים של ענאן"
