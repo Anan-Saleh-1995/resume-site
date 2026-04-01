@@ -289,6 +289,10 @@ body {
   justify-content: flex-start;
 }
 
+[dir='rtl'] .site-controls {
+  flex-direction: row-reverse;
+}
+
 [dir='rtl'] .site-brand-copy,
 [dir='rtl'] .site-footer-copy,
 [dir='rtl'] .site-footer-actions {

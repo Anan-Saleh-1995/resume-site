@@ -1,8 +1,8 @@
 {{ $page := .page }} {{ $items := hugo.Data.site_nav }} {{ $pages := where
 $page.Site.RegularPages "Lang" $page.Site.Language.Lang }} {{ if $items }}
 <nav class="site-nav" aria-label="{{ i18n `siteNavLabel` }}">
-  {{ range $item := $items }} {{ $matches := where $pages
-  "TranslationKey" $item.translationKey }} {{ range first 1 $matches }}
+  {{ range $item := $items }} {{ $matches := where $pages "TranslationKey"
+  $item.translationKey }} {{ range first 1 $matches }}
   <a
     class="site-nav-link{{ if eq .RelPermalink $page.RelPermalink }} is-active{{ end }}"
     href="{{ .RelPermalink }}"
