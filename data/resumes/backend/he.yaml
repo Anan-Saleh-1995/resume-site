@@ -1,0 +1,92 @@
+basics:
+  name: 'ענן'
+  title: 'מפתח בקאנד'
+  location: 'ישראל'
+  summary: >
+    כתוב כאן תקציר מקצועי ממוקד בקאנד.
+  email: 'your@email.com'
+  phone: '+972-00-000-0000'
+  website:
+    label: 'example.com'
+    url: 'https://example.com'
+  linkedin:
+    label: 'לינקדאין'
+    url: 'https://linkedin.com/in/yourname'
+  github:
+    label: 'GitHub'
+    url: 'https://github.com/yourname'
+
+skills:
+  - items:
+      - 'TypeScript'
+      - 'JavaScript'
+      - 'Node.js'
+      - 'Express'
+      - 'NestJS'
+      - 'REST APIs'
+      - 'OpenAPI'
+      - 'Swagger'
+  - items:
+      - 'MongoDB'
+      - 'Mongoose'
+      - 'MySQL'
+      - 'Knex'
+      - 'Prisma'
+      - 'Redis'
+      - 'Passport'
+      - 'Zod'
+      - 'Joi'
+  - items:
+      - 'Jest'
+      - 'Vitest'
+      - 'Supertest'
+      - 'Unit Testing'
+      - 'Integration Testing'
+      - 'Docker'
+      - 'Docker Compose'
+      - 'Prometheus'
+      - 'Grafana'
+      - 'AWS S3'
+      - 'EC2'
+      - 'IAM'
+  - items:
+      - 'Linux'
+      - 'WSL'
+      - 'Bash'
+      - 'PowerShell'
+      - 'Git'
+      - 'GitHub'
+      - 'SSH'
+      - 'Postman'
+      - 'Jira'
+
+experience:
+  - company: 'שם החברה'
+    role: 'מפתח בקאנד'
+    location: 'מרחוק'
+    start: '2023'
+    end: 'היום'
+    highlights:
+      - 'פיתחתי ותחזקתי שירותי בקאנד, APIs ואינטגרציות.'
+      - 'שיפרתי תהליכי פיתוח, כיסוי בדיקות וכלי דיפלוי.'
+
+education:
+  - institution: 'שם האוניברסיטה'
+    degree: 'תואר ראשון בתחום כלשהו'
+    start: '2018'
+    end: '2022'
+
+projects:
+  - name: 'Travel App'
+    url: 'https://example.com'
+    description: >
+      אפליקציית טיולים עם דגש על בקאנד, אימות משתמשים, אחסון, בדיקות,
+      תצפיות ואינטגרציות ענן.
+
+languages:
+  - name: 'ערבית'
+    level: 'שפת אם'
+  - name: 'עברית'
+    level: 'שוטף'
+  - name: 'אנגלית'
+    level: 'שוטף'

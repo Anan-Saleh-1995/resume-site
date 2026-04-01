@@ -10,6 +10,7 @@ disableKinds = ["taxonomy", "term"]
     languageCode = "en-US"
     languageName = "English"
     languageDirection = "ltr"
+    contentDir = "content/en"
     weight = 1
     title = "Anan Resume"
 
@@ -17,5 +18,6 @@ disableKinds = ["taxonomy", "term"]
     languageCode = "he-IL"
     languageName = "עברית"
     languageDirection = "rtl"
+    contentDir = "content/he"
     weight = 2
     title = "קורות החיים של ענן"

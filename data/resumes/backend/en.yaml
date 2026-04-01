@@ -1,0 +1,92 @@
+basics:
+  name: 'Anan'
+  title: 'Backend Developer'
+  location: 'Israel'
+  summary: >
+    Write a backend-focused professional summary here.
+  email: 'your@email.com'
+  phone: '+972-00-000-0000'
+  website:
+    label: 'example.com'
+    url: 'https://example.com'
+  linkedin:
+    label: 'LinkedIn'
+    url: 'https://linkedin.com/in/yourname'
+  github:
+    label: 'GitHub'
+    url: 'https://github.com/yourname'
+
+skills:
+  - items:
+      - 'TypeScript'
+      - 'JavaScript'
+      - 'Node.js'
+      - 'Express'
+      - 'NestJS'
+      - 'REST APIs'
+      - 'OpenAPI'
+      - 'Swagger'
+  - items:
+      - 'MongoDB'
+      - 'Mongoose'
+      - 'MySQL'
+      - 'Knex'
+      - 'Prisma'
+      - 'Redis'
+      - 'Passport'
+      - 'Zod'
+      - 'Joi'
+  - items:
+      - 'Jest'
+      - 'Vitest'
+      - 'Supertest'
+      - 'Unit Testing'
+      - 'Integration Testing'
+      - 'Docker'
+      - 'Docker Compose'
+      - 'Prometheus'
+      - 'Grafana'
+      - 'AWS S3'
+      - 'EC2'
+      - 'IAM'
+  - items:
+      - 'Linux'
+      - 'WSL'
+      - 'Bash'
+      - 'PowerShell'
+      - 'Git'
+      - 'GitHub'
+      - 'SSH'
+      - 'Postman'
+      - 'Jira'
+
+experience:
+  - company: 'Company Name'
+    role: 'Backend Developer'
+    location: 'Remote'
+    start: '2023'
+    end: 'Present'
+    highlights:
+      - 'Built and maintained backend services, APIs, and integrations.'
+      - 'Improved developer workflows, testing coverage, and deployment tooling.'
+
+education:
+  - institution: 'University Name'
+    degree: 'B.Sc. in Something'
+    start: '2018'
+    end: '2022'
+
+projects:
+  - name: 'Travel App'
+    url: 'https://example.com'
+    description: >
+      Backend-heavy travel application with authentication, storage, testing,
+      observability, and cloud integrations.
+
+languages:
+  - name: 'Arabic'
+    level: 'Mother language'
+  - name: 'Hebrew'
+    level: 'Fluent'
+  - name: 'English'
+    level: 'Fluent'
