@@ -12,31 +12,16 @@ body {
   font-family: var(--font-body);
   line-height: var(--line-height-base);
   color: var(--color-text);
-  background: linear-gradient(
-    180deg,
-    var(--color-bg) 0%,
-    color-mix(in srgb, var(--color-bg) 72%, #fff 28%) 100%
-  );
 }
 
 .site-shell {
-  width: min(100% - 2rem, 8.4in);
+  width: min(100% - 2rem, 70rem);
   margin: 0 auto;
 }
 
 .site-header,
 .site-footer {
   padding: var(--space-4) 0;
-}
-
-.site-header .site-shell,
-.site-footer .site-shell {
-  display: flex;
-}
-
-.site-header .site-shell {
-  direction: ltr;
-  justify-content: flex-end;
 }
 
 h1,

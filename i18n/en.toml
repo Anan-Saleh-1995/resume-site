@@ -15,3 +15,33 @@ other = "Selected Project"
 
 [languages]
 other = "Languages"
+
+[navResume]
+other = "Resume"
+
+[navBackend]
+other = "Backend"
+
+[navCompact]
+other = "Compact"
+
+[siteNavLabel]
+other = "Site navigation"
+
+[siteTagline]
+other = "Hosted bilingual resume"
+
+[siteRibbonCopy]
+other = "Choose the version that best matches the role and keep the PDF for direct review."
+
+[siteFooterKicker]
+other = "Next Step"
+
+[siteFooterTitle]
+other = "Interested in full-stack or backend work?"
+
+[siteFooterText]
+other = "This site mirrors the printable resume and makes it easy to review English and Hebrew versions before a conversation."
+
+[siteFooterCta]
+other = "Contact by email"

@@ -15,3 +15,33 @@ other = "פרויקט נבחר"
 
 [languages]
 other = "שפות"
+
+[navResume]
+other = "קורות חיים"
+
+[navBackend]
+other = "בקאנד"
+
+[navCompact]
+other = "קומפקטי"
+
+[siteNavLabel]
+other = "ניווט באתר"
+
+[siteTagline]
+other = "קורות חיים דו-לשוניים בגרסה מתארחת"
+
+[siteRibbonCopy]
+other = "אפשר לבחור גרסה שמתאימה לתפקיד ולשמור את ה-PDF לעיון ישיר."
+
+[siteFooterKicker]
+other = "המשך"
+
+[siteFooterTitle]
+other = "מעוניינים בפרופיל פול-סטאק או בקאנד?"
+
+[siteFooterText]
+other = "האתר משקף את קובץ קורות החיים להדפסה ומאפשר לעבור בין הגרסאות בעברית ובאנגלית לפני שיחה."
+
+[siteFooterCta]
+other = "יצירת קשר במייל"

@@ -7,18 +7,10 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-shell">
-        <div class="site-controls">
-          {{ partial "language-switcher.html" . }} {{ partial
-          "theme-toggle.html" . }}
-        </div>
-      </div>
-    </header>
-    {{ block "main" . }}{{ end }}
-    <footer class="site-footer">
-      <div class="site-shell"></div>
-    </footer>
+    {{ $resolved := partial "resume/resolve.html" . }} {{ partial
+    "site-header.html" (dict "page" . "resolved" $resolved) }} {{ block "main" .
+    }}{{ end }} {{ partial "site-footer.html" (dict "page" . "resolved"
+    $resolved) }}
     <script>
       (() => {
         const button = document.querySelector('.theme-toggle');

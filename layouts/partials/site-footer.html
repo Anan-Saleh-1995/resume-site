@@ -1,0 +1,22 @@
+{{ $resolved := .resolved }} {{ $email := $resolved.resume.basics.email }}
+
+<footer class="site-footer">
+  <div class="site-shell">
+    <div class="site-footer-card">
+      <div class="site-footer-copy">
+        <p class="site-footer-kicker">{{ i18n "siteFooterKicker" }}</p>
+        <p class="site-footer-title">{{ i18n "siteFooterTitle" }}</p>
+        <p class="site-footer-text">{{ i18n "siteFooterText" }}</p>
+      </div>
+
+      {{ with $email }}
+      <div class="site-footer-actions">
+        <a class="site-footer-cta" href="mailto:{{ . }}"
+          >{{ i18n "siteFooterCta" }}</a
+        >
+        <span class="site-footer-email">{{ . }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</footer>
