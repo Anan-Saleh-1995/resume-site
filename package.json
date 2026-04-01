@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:css": "sass assets/scss/main.scss assets/css/main.css --no-source-map",
-    "dev": "npm run build:css && hugo server",
-    "build": "npm run build:css && hugo",
+    "dev": "node scripts/run-hugo.cjs dev",
+    "build": "node scripts/run-hugo.cjs build",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint:md": "markdownlint-cli2 \"README.md\"",

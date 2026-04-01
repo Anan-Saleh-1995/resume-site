@@ -5,3 +5,4 @@
 assets/css/main.css
 .DS_Store
 Thumbs.db
+.env

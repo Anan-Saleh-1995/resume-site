@@ -1,5 +1,6 @@
 {{ $resume := .resume }}
 {{ $rootClass := .rootClass | default "template-classic" }}
+{{ $showPrivateContact := eq (lower (getenv "HUGO_SHOW_PRIVATE_CONTACT")) "true" }}
 
 <main
   class="{{ $rootClass }}"
@@ -12,8 +13,8 @@
       <p class="resume-title">{{ . }}</p>
     {{ end }}
     <div class="resume-contact-list">
-      {{ with $resume.basics.phone }}
-        <span class="resume-contact-item resume-contact-item-phone">{{ . }}</span>
+      {{ if and $showPrivateContact $resume.basics.phone }}
+        <span class="resume-contact-item">{{ $resume.basics.phone }}</span>
       {{ end }}
       {{ with $resume.basics.email }}
         <a class="resume-contact-item" href="mailto:{{ . }}">{{ . }}</a>
