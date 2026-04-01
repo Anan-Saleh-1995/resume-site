@@ -1,14 +1,16 @@
 # Hugo Bilingual Resume
 
-This project is a bilingual Hugo resume site built to be easy to maintain by editing text files instead of templates for day-to-day resume updates.
+This project is a bilingual Hugo resume site built to be easy to maintain by editing structured content files instead of rewriting templates for every resume tweak.
 
-It is also a learning project. The structure here is intentionally simple so the same Hugo concepts can be reused later for a bigger personal site, blog, or documentation-style website.
+It is also a learning project. The current repo now supports reusable resume templates and reusable job-targeted variants, so the same Hugo structure can scale into a larger personal-site or multi-resume setup later.
 
 ## What This Site Does
 
-- Serves an English and Hebrew version of the same resume
+- Serves English and Hebrew resume pages
 - Uses YAML data files for structured resume content
-- Uses Hugo templates to render both languages from the same layout logic
+- Supports reusable resume variants such as `fullstack` and `backend`
+- Supports reusable resume templates such as `classic` and `compact`
+- Uses front matter to select which template and variant a page renders
 - Uses `i18n` files for interface labels
 - Supports RTL for Hebrew
 - Supports light mode, dark mode, and print-friendly output
@@ -19,15 +21,27 @@ It is also a learning project. The structure here is intentionally simple so the
       assets/
         scss/
           main.scss
+          _template-classic.scss
+          _template-compact.scss
         css/
           main.css
       content/
-        en/_index.md
-        he/_index.md
+        en/
+          _index.md
+          backend.md
+          compact.md
+        he/
+          _index.md
+          backend.md
+          compact.md
       data/
-        resume/
-          en.yaml
-          he.yaml
+        resumes/
+          fullstack/
+            en.yaml
+            he.yaml
+          backend/
+            en.yaml
+            he.yaml
       i18n/
         en.toml
         he.toml
@@ -36,6 +50,11 @@ It is also a learning project. The structure here is intentionally simple so the
           baseof.html
           section.html
         partials/
+          resume/
+            render.html
+            templates/
+              classic.html
+              compact.html
           head.html
           language-switcher.html
           resume-main.html
@@ -50,13 +69,36 @@ It is also a learning project. The structure here is intentionally simple so the
 The data flow in this project is:
 
 1. `hugo.toml` defines site config, languages, and build behavior.
-2. `content/` defines the language-aware page nodes.
-3. `data/resume/*.yaml` stores the actual resume content.
+2. `content/` defines pages and selects a `template` and `variant` in front matter.
+3. `data/resumes/<variant>/<lang>.yaml` stores the actual resume content for each variant.
 4. `i18n/*.toml` stores translated UI labels like section names.
-5. `layouts/` renders the content into HTML.
+5. `layouts/partials/resume/render.html` resolves the active data and dispatches to the selected template partial.
 6. `assets/scss/main.scss` is the source stylesheet entry.
 7. `npm run build:css` compiles it into `assets/css/main.css`.
 8. Hugo fingerprints the generated CSS and builds the final static site into `public/`.
+
+## Template And Variant Model
+
+This repo separates two ideas:
+
+- Template:
+  - controls layout, section presentation, and template-specific styling
+- Variant:
+  - controls the content emphasis for a target role
+
+Current examples:
+
+- Templates:
+  - `classic`
+  - `compact`
+- Variants:
+  - `fullstack`
+  - `backend`
+
+The default home pages currently render:
+
+- `template = "classic"`
+- `variant = "fullstack"`
 
 ## Where To Edit Things
 
@@ -64,19 +106,39 @@ The data flow in this project is:
 
 Edit these files:
 
-- `data/resume/en.yaml`
-- `data/resume/he.yaml`
+- `data/resumes/fullstack/en.yaml`
+- `data/resumes/fullstack/he.yaml`
+- `data/resumes/backend/en.yaml`
+- `data/resumes/backend/he.yaml`
 
 Use them for:
 
 - name
 - title
 - summary
-- links
 - skills
 - experience
 - education
 - projects
+- languages
+
+Each variant is a reusable content preset for a target role.
+
+### Page selection
+
+Edit these files:
+
+- `content/en/_index.md`
+- `content/he/_index.md`
+- `content/en/backend.md`
+- `content/he/backend.md`
+- `content/en/compact.md`
+- `content/he/compact.md`
+
+Use front matter like:
+
+    template: "classic"
+    variant: "fullstack"
 
 ### Interface labels
 
@@ -88,23 +150,26 @@ Edit these files:
 Use them for:
 
 - Summary
-- Links
 - Skills
 - Experience
 - Education
 - Projects
+- Languages
 
-### Layout and structure
+### Layout and rendering
 
 Edit:
 
-- `layouts/partials/resume-main.html`
+- `layouts/partials/resume/render.html`
+- `layouts/partials/resume/templates/classic.html`
+- `layouts/partials/resume/templates/compact.html`
 - `layouts/_default/baseof.html`
 - `layouts/partials/language-switcher.html`
 - `layouts/partials/theme-toggle.html`
 
 Use these when changing:
 
+- template selection/fallback behavior
 - section order
 - HTML structure
 - switcher placement
@@ -115,16 +180,16 @@ Use these when changing:
 Edit:
 
 - `assets/scss/main.scss`
+- `assets/scss/_template-classic.scss`
+- `assets/scss/_template-compact.scss`
 
 This source entry file currently imports:
 
 - design tokens
 - theme tokens
 - base styles
-- layout styles
-- resume component styles
-- skills styles
 - controls styles
+- template styles
 - RTL helpers
 - responsive rules
 - print rules
@@ -140,6 +205,7 @@ Use YAML when:
 - content has repeated fields
 - content is list-like or card-like
 - the same structure is rendered in multiple languages
+- you want reusable job-targeted variants
 
 Use Markdown when:
 
@@ -150,7 +216,7 @@ Use Markdown when:
 If this project grows into a bigger personal site later, a good model is:
 
 - `content/` for blog posts, notes, docs, and long pages
-- `data/` for structured datasets such as projects, links, timelines, FAQs
+- `data/` for structured datasets such as projects, links, timelines, FAQs, or resource directories
 
 ## Commands
 
@@ -160,7 +226,7 @@ Install dependencies:
 
 Run the dev server:
 
-    hugo server
+    npm run dev
 
 Validate formatting, linting, and build:
 
@@ -172,7 +238,7 @@ Format files:
 
 Production build:
 
-    hugo
+    npm run build
 
 ## Theme and Language Behavior
 
@@ -181,12 +247,14 @@ Production build:
 - Theme preference defaults to system preference
 - Manual theme choice is stored in `localStorage`
 - Print mode hides non-document UI such as site controls
+- Pages choose a resume `template` and `variant` through front matter
 
 ## Maintenance Notes
 
 - Edit resume content in YAML first, not in templates
 - Edit labels in `i18n` files, not inline in HTML
-- Keep templates generic so both languages stay in sync
+- Keep variants reusable so job-specific tailoring stays structured
+- Keep templates generic so both languages and variants stay in sync
 - Keep commits small and milestone-based
 - Use `npm run validate` before committing
 
@@ -200,14 +268,21 @@ This repo is a good base for learning Hugo fundamentals:
 - `layouts/` teaches template composition
 - `assets/` teaches Hugo-managed styling
 
-For a future personal site or wiki-style project, keep the same mental model and expand it instead of replacing it.
+This repo now separates:
+
+- templates: visual layout and section presentation
+- variants: job-targeted content emphasis
+
+That makes it a stronger base for future resume experiments without duplicating the whole site.
 
 ## Current Status
 
 Implemented:
 
-- bilingual English/Hebrew resume
-- YAML-driven resume rendering
+- bilingual English/Hebrew resume pages
+- template-driven, variant-aware resume rendering
+- reusable `classic` and `compact` template paths
+- reusable `fullstack` and `backend` resume variants
 - language switcher
 - light/dark theme toggle
 - RTL support
@@ -219,5 +294,7 @@ Still possible to add later:
 - GitHub Pages deployment
 - GitHub Actions CI
 - Dependabot
+- more resume templates
+- more job-targeted resume variants
 - broader personal-site sections
 - blog or notes content under `content/`
