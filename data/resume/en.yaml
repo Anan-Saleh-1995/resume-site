@@ -1,12 +1,20 @@
 basics:
   name: 'Anan'
   title: 'Full-Stack Developer'
-  email: 'your@email.com'
-  phone: '+972-00-000-0000'
   location: 'Israel'
-  website: 'https://example.com'
   summary: >
     Write a short professional summary here.
+  email: 'your@email.com'
+  phone: '+972-00-000-0000'
+  website:
+    label: 'example.com'
+    url: 'https://example.com'
+  linkedin:
+    label: 'LinkedIn'
+    url: 'https://linkedin.com/in/yourname'
+  github:
+    label: 'GitHub'
+    url: 'https://github.com/yourname'
 
 links:
   - label: 'GitHub'
@@ -15,10 +23,55 @@ links:
     url: 'https://linkedin.com/in/yourname'
 
 skills:
-  - name: 'JavaScript'
-  - name: 'Node.js'
-  - name: 'React'
-  - name: 'Hugo'
+  - items:
+      - 'TypeScript'
+      - 'JavaScript'
+      - 'Node.js'
+      - 'Express'
+      - 'NestJS'
+      - 'React'
+      - 'Vite'
+      - 'REST APIs'
+      - 'OpenAPI'
+      - 'Swagger'
+  - items:
+      - 'MongoDB'
+      - 'Mongoose'
+      - 'MySQL'
+      - 'Knex'
+      - 'Prisma'
+      - 'Supabase'
+      - 'Redis'
+      - 'Passport'
+      - 'Zod'
+      - 'Joi'
+  - items:
+      - 'Jest'
+      - 'Vitest'
+      - 'Supertest'
+      - 'Unit Testing'
+      - 'Integration Testing'
+      - 'ESLint'
+      - 'Prettier'
+      - 'Docker'
+      - 'Docker Compose'
+      - 'Prometheus'
+      - 'Grafana'
+      - 'AWS S3'
+      - 'EC2'
+      - 'IAM'
+  - items:
+      - 'Linux'
+      - 'WSL'
+      - 'Bash'
+      - 'PowerShell'
+      - 'Git'
+      - 'GitHub'
+      - 'Bitbucket'
+      - 'SSH'
+      - 'Postman'
+      - 'Jira'
+      - 'DocsJS'
 
 experience:
   - company: 'Company Name'

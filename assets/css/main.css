@@ -147,7 +147,7 @@ a:hover {
 
 main {
   color: var(--color-text);
-  width: min(100% - 2rem, 900px);
+  width: min(100% - 2rem, 980px);
   margin: var(--space-7) auto;
   padding: var(--space-6);
   background: var(--color-surface);
@@ -167,15 +167,25 @@ article + article {
 /* Resume Components */
 
 .resume-header {
-  padding-bottom: var(--space-5);
-  margin-bottom: var(--space-6);
-  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-5);
+  text-align: center;
 }
 
-.resume-role {
-  margin-top: var(--space-2);
-  font-size: 1.125rem;
+.resume-header h1 {
+  margin-bottom: var(--space-4);
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.resume-contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
   color: var(--color-muted);
+  font-size: 0.95rem;
 }
 
 .resume-meta {
@@ -188,8 +198,21 @@ article + article {
   align-items: center;
 }
 
+.resume-contact-item,
 .resume-meta a {
   color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-contact-item + .resume-contact-item::before {
+  content: '|';
+  margin: 0 0.6rem;
+  color: var(--color-border);
+}
+
+.resume-contact-item:hover {
+  color: var(--color-accent);
 }
 
 section > p,
@@ -242,26 +265,69 @@ article h3 + p {
 }
 
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: var(--space-3) 0 0;
+  display: block;
+  margin: var(--space-2) 0 0;
   padding: 0;
   list-style: none;
 }
 
+.skills-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skills-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
 .skills-list li {
-  padding: 0.35rem 0.65rem;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--color-surface) 88%, #fff 12%);
+  padding: 0;
+  padding-inline-start: 1rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: var(--color-text);
+  box-shadow: none;
+  line-height: 1.3;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.skills-line {
+  display: block;
+  width: 100%;
+}
+
+.skills-token {
+  display: inline;
+  direction: ltr;
   unicode-bidi: isolate;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+}
+
+.skills-separator {
+  color: var(--color-muted);
 }
 
 .skills-list li::before {
-  content: none;
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.24rem;
+  height: 0.24rem;
+  border-radius: 999px;
+  background: currentcolor;
+}
+
+.skills-list em {
+  color: var(--color-muted);
+  font-style: italic;
 }
 
 /* Site Controls */
@@ -330,7 +396,7 @@ article h3 + p {
 
 [dir='rtl'] .resume-meta,
 [dir='rtl'] .resume-entry-meta,
-[dir='rtl'] .resume-role,
+[dir='rtl'] .resume-contact-list,
 [dir='rtl'] p,
 [dir='rtl'] li {
   unicode-bidi: plaintext;
@@ -340,11 +406,20 @@ article h3 + p {
   justify-content: flex-start;
 }
 
+[dir='rtl'] .skills-list li {
+  text-align: right;
+  unicode-bidi: normal;
+}
+
+[dir='rtl'] .skills-list .skills-line {
+  text-align: right;
+}
+
 /* Responsive */
 
 @media (max-width: 640px) {
   main {
-    width: min(100% - 1rem, 900px);
+    width: min(100% - 1rem, 980px);
     margin: 4.5rem auto var(--space-4);
     padding: var(--space-4);
     border-radius: 12px;
@@ -354,10 +429,13 @@ article h3 + p {
     font-size: 2rem;
   }
 
-  .resume-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
+  .resume-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .resume-contact-list {
+    justify-content: center;
+    row-gap: 0.35rem;
   }
 
   .site-controls {
@@ -373,6 +451,10 @@ article h3 + p {
   .theme-toggle {
     padding: 0.4rem 0.6rem;
     font-size: 0.82rem;
+  }
+
+  .skills-list li {
+    white-space: normal;
   }
 }
 
@@ -415,8 +497,7 @@ article h3 + p {
 
   .skills-list li {
     background: transparent;
-    border-color: #bbb;
-    padding: 0.15rem 0.45rem;
+    padding: 0;
   }
 
   h1 {

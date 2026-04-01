@@ -2,15 +2,40 @@
 <main>
   <header class="resume-header">
     <h1>{{ $resume.basics.name }}</h1>
-    <p class="resume-role">{{ $resume.basics.title }}</p>
-
-    <div class="resume-meta">
-      <span>{{ $resume.basics.location }}</span>
-      <span>{{ $resume.basics.email }}</span>
-      <span>{{ $resume.basics.phone }}</span>
-      <a href="{{ $resume.basics.website }}">{{ $resume.basics.website }}</a>
+    <div class="resume-contact-list">
+      {{ with $resume.basics.linkedin }}
+      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
+      {{ end }} {{ with $resume.basics.phone }}
+      <span class="resume-contact-item">{{ . }}</span>
+      {{ end }} {{ with $resume.basics.website }}
+      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
+      {{ end }} {{ with $resume.basics.email }}
+      <a class="resume-contact-item" href="mailto:{{ . }}">{{ . }}</a>
+      {{ end }} {{ with $resume.basics.github }}
+      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
     </div>
   </header>
+
+  <section class="skills-section">
+    <h2 class="skills-heading">{{ i18n "skills" }}</h2>
+    <ul class="skills-list">
+      {{ range $resume.skills }}
+      <li>
+        <span class="skills-line">
+          {{ range $index, $item := .items }}{{ if $index }}<span
+            class="skills-separator"
+            aria-hidden="true"
+          >
+            | </span
+          >{{ end }}<span class="skills-token">{{ $item }}</span>{{ end }} {{
+          with .note }}<span class="skills-note"> - <em>{{ . }}</em></span
+          >{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
 
   <section>
     <h2>{{ i18n "summary" }}</h2>
@@ -22,15 +47,6 @@
     <ul class="link-list">
       {{ range $resume.links }}
       <li><a href="{{ .url }}">{{ .label }}</a></li>
-      {{ end }}
-    </ul>
-  </section>
-
-  <section>
-    <h2>{{ i18n "skills" }}</h2>
-    <ul class="skills-list">
-      {{ range $resume.skills }}
-      <li>{{ .name }}</li>
       {{ end }}
     </ul>
   </section>
