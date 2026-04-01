@@ -1,0 +1,40 @@
+@media (max-width: 640px) {
+  main {
+    width: min(100% - 1rem, 980px);
+    margin: 4.5rem auto var(--space-4);
+    padding: var(--space-4);
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .resume-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .resume-contact-list {
+    justify-content: center;
+    row-gap: 0.35rem;
+  }
+
+  .site-controls {
+    inset-block-start: 0.75rem;
+    inset-inline-end: 0.75rem;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .language-switcher,
+  .theme-toggle {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.82rem;
+  }
+
+  .skills-list li {
+    white-space: normal;
+  }
+}

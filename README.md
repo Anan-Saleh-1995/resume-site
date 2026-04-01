@@ -17,6 +17,8 @@ It is also a learning project. The structure here is intentionally simple so the
 
     hugo/
       assets/
+        scss/
+          main.scss
         css/
           main.css
       content/
@@ -52,8 +54,9 @@ The data flow in this project is:
 3. `data/resume/*.yaml` stores the actual resume content.
 4. `i18n/*.toml` stores translated UI labels like section names.
 5. `layouts/` renders the content into HTML.
-6. `assets/css/main.css` styles the site and is processed by Hugo.
-7. Hugo builds the final static site into `public/`.
+6. `assets/scss/main.scss` is the source stylesheet entry.
+7. `npm run build:css` compiles it into `assets/css/main.css`.
+8. Hugo fingerprints the generated CSS and builds the final static site into `public/`.
 
 ## Where To Edit Things
 
@@ -111,17 +114,22 @@ Use these when changing:
 
 Edit:
 
-- `assets/css/main.css`
+- `assets/scss/main.scss`
 
-This file currently contains:
+This source entry file currently imports:
 
 - design tokens
+- theme tokens
 - base styles
 - layout styles
 - resume component styles
+- skills styles
+- controls styles
 - RTL helpers
 - responsive rules
 - print rules
+
+The generated file `assets/css/main.css` is build output and should not be edited by hand.
 
 ## Markdown vs YAML
 
