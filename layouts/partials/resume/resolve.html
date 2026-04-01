@@ -1,0 +1,34 @@
+{{ $page := . }}
+{{ $lang := $page.Site.Language.Lang }}
+{{ $variants := hugo.Data.resumes }}
+
+{{ $variant := $page.Params.variant | default "fullstack" }}
+{{ if not (index $variants $variant) }}
+  {{ $variant = "fullstack" }}
+{{ end }}
+
+{{ $variantData := index $variants $variant }}
+{{ $resume := index $variantData $lang }}
+
+{{ if not $resume }}
+  {{ $variant = "fullstack" }}
+  {{ $variantData = index $variants $variant }}
+  {{ $resume = index $variantData $lang }}
+{{ end }}
+
+{{ $template := $page.Params.template | default "classic" }}
+{{ $templatePartial := printf "resume/templates/%s.html" $template }}
+
+{{ if not (templates.Exists (printf "partials/%s" $templatePartial)) }}
+  {{ $template = "classic" }}
+  {{ $templatePartial = printf "resume/templates/%s.html" $template }}
+{{ end }}
+
+{{ return dict
+  "page" $page
+  "lang" $lang
+  "resume" $resume
+  "template" $template
+  "variant" $variant
+  "templatePartial" $templatePartial
+}}

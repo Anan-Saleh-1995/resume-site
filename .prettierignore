@@ -1,1 +1,4 @@
 layouts/partials/resume/render.html
+layouts/partials/resume/resolve.html
+layouts/partials/resume/templates/classic.html
+layouts/partials/resume/templates/compact.html

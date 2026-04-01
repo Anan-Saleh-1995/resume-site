@@ -7,11 +7,18 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <div class="site-controls">
-      {{ partial "theme-toggle.html" . }} {{ partial "language-switcher.html" .
-      }}
-    </div>
+    <header class="site-header">
+      <div class="site-shell">
+        <div class="site-controls">
+          {{ partial "language-switcher.html" . }} {{ partial
+          "theme-toggle.html" . }}
+        </div>
+      </div>
+    </header>
     {{ block "main" . }}{{ end }}
+    <footer class="site-footer">
+      <div class="site-shell"></div>
+    </footer>
     <script>
       (() => {
         const button = document.querySelector('.theme-toggle');

@@ -52,12 +52,12 @@ It is also a learning project. The current repo now supports reusable resume tem
         partials/
           resume/
             render.html
+            resolve.html
             templates/
               classic.html
               compact.html
           head.html
           language-switcher.html
-          resume-main.html
           theme-toggle.html
         index.html
       static/
@@ -72,10 +72,12 @@ The data flow in this project is:
 2. `content/` defines pages and selects a `template` and `variant` in front matter.
 3. `data/resumes/<variant>/<lang>.yaml` stores the actual resume content for each variant.
 4. `i18n/*.toml` stores translated UI labels like section names.
-5. `layouts/partials/resume/render.html` resolves the active data and dispatches to the selected template partial.
-6. `assets/scss/main.scss` is the source stylesheet entry.
-7. `npm run build:css` compiles it into `assets/css/main.css`.
-8. Hugo fingerprints the generated CSS and builds the final static site into `public/`.
+5. `layouts/partials/resume/resolve.html` resolves the active data and template choice.
+6. `layouts/partials/resume/render.html` dispatches to the selected template partial.
+7. `layouts/_default/baseof.html` provides the shared page shell with a stable header and footer.
+8. `assets/scss/main.scss` is the source stylesheet entry.
+9. `npm run build:css` compiles it into `assets/css/main.css`.
+10. Hugo fingerprints the generated CSS and builds the final static site into `public/`.
 
 ## Template And Variant Model
 
@@ -161,6 +163,7 @@ Use them for:
 Edit:
 
 - `layouts/partials/resume/render.html`
+- `layouts/partials/resume/resolve.html`
 - `layouts/partials/resume/templates/classic.html`
 - `layouts/partials/resume/templates/compact.html`
 - `layouts/_default/baseof.html`
@@ -248,6 +251,7 @@ Production build:
 - Manual theme choice is stored in `localStorage`
 - Print mode hides non-document UI such as site controls
 - Pages choose a resume `template` and `variant` through front matter
+- The shared page header and footer stay stable while the selected resume template renders inside `main`
 
 ## Maintenance Notes
 
