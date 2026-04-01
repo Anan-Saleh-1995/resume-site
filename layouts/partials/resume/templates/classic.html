@@ -1,6 +1,10 @@
 {{ $resume := .resume }}
 {{ $rootClass := .rootClass | default "template-classic" }}
 {{ $showPrivateContact := eq (lower (getenv "HUGO_SHOW_PRIVATE_CONTACT")) "true" }}
+{{ $alternateTranslation := "" }}
+{{ with index .page.Translations 0 }}
+  {{ $alternateTranslation = .Permalink }}
+{{ end }}
 
 <main
   class="{{ $rootClass }}"
@@ -155,6 +159,11 @@
           </li>
         {{ end }}
       </ul>
+      {{ with $alternateTranslation }}
+        <p class="resume-print-link">
+          <a href="{{ . }}" class="resume-print-link-label">{{ i18n "alternateResumeLinkLabel" }}</a>
+        </p>
+      {{ end }}
     </section>
   {{ end }}
 </main>

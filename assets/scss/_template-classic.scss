@@ -188,6 +188,10 @@ main.template-classic {
     margin-top: var(--space-2);
   }
 
+  .resume-print-link {
+    display: none;
+  }
+
   .resume-language-level {
     color: var(--color-muted);
   }

@@ -274,6 +274,13 @@ body {
   font-size: 0.86rem;
 }
 
+.site-footer-meta {
+  margin: 0.9rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 [dir='rtl'] .site-brand-copy,
 [dir='rtl'] .site-ribbon,
 [dir='rtl'] .site-footer-copy,

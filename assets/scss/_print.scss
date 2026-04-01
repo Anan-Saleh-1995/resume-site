@@ -21,6 +21,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -128,6 +129,24 @@
   .template-classic .resume-section-education,
   .template-classic .resume-section-languages {
     margin-top: 0.5rem;
+  }
+
+  main.template-classic .resume-print-link {
+    display: block;
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    max-width: 42%;
+    margin: 0;
+    font-size: 0.72rem;
+    color: var(--color-muted);
+    line-height: 1.15;
+    text-align: start;
+  }
+
+  main.template-classic .resume-print-link-label {
+    color: var(--color-text);
+    font-weight: 600;
   }
 
   .template-classic .resume-languages {
