@@ -1,6 +1,6 @@
 @media (max-width: 640px) {
   .site-shell {
-    width: min(100% - 1rem, 980px);
+    width: min(100% - 1rem, 70rem);
   }
 
   main.template-classic {
@@ -10,18 +10,122 @@
     border-radius: 12px;
   }
 
+  .site-header {
+    padding-bottom: var(--space-4);
+  }
+
+  .site-masthead,
+  .site-footer-card {
+    padding: 0.9rem;
+  }
+
+  .site-masthead,
+  .site-footer-card,
+  .site-masthead-side {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-brand {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.65rem;
+  }
+
+  .site-brand-copy,
+  .site-footer-copy,
+  .site-footer-actions {
+    text-align: center;
+  }
+
+  [dir='rtl'] .site-brand-copy,
+  [dir='rtl'] .site-masthead-side,
+  [dir='rtl'] .site-ribbon {
+    direction: ltr;
+  }
+
+  [dir='rtl'] .site-brand-copy {
+    text-align: center;
+  }
+
+  .site-masthead-side {
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .site-nav,
+  .site-controls {
+    justify-content: center;
+  }
+
+  .site-controls {
+    direction: ltr;
+    flex-direction: row;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+  }
+
+  .site-ribbon {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.45rem;
+  }
+
+  [dir='rtl'] .site-ribbon {
+    direction: ltr;
+  }
+
+  .site-ribbon-separator {
+    inline-size: 3.2rem;
+    margin-inline: 0;
+  }
+
+  .site-footer-actions {
+    justify-items: center;
+  }
+
   .template-classic .resume-header h1 {
     font-size: 1.9rem;
+  }
+
+  .template-classic .resume-header,
+  .template-classic .resume-title,
+  .template-classic .resume-contact-list {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .template-classic .resume-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .template-classic section h2 {
+    justify-content: center;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
   }
 
   .template-classic .resume-contact-list {
     justify-content: center;
     row-gap: 0.35rem;
+    column-gap: 0.6rem;
   }
 
-  .site-controls {
-    gap: 0.4rem;
-    flex-wrap: nowrap;
+  .template-classic .resume-contact-item + .resume-contact-item::before {
+    margin: 0 0.35rem;
   }
 
   .language-switcher,
