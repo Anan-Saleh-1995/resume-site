@@ -1,5 +1,6 @@
-{{ $resume := .resume }} {{ $rootClass := .rootClass | default
-"template-classic" }}
+{{ $resume := .resume }}
+{{ $rootClass := .rootClass | default "template-classic" }}
+
 <main
   class="{{ $rootClass }}"
   data-template="{{ .template }}"
@@ -7,100 +8,152 @@
 >
   <header class="resume-header">
     <h1>{{ $resume.basics.name }}</h1>
+    {{ with $resume.basics.title }}
+      <p class="resume-title">{{ . }}</p>
+    {{ end }}
     <div class="resume-contact-list">
-      {{ with $resume.basics.linkedin }}
-      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
-      {{ end }} {{ with $resume.basics.phone }}
-      <span class="resume-contact-item">{{ . }}</span>
-      {{ end }} {{ with $resume.basics.website }}
-      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
-      {{ end }} {{ with $resume.basics.email }}
-      <a class="resume-contact-item" href="mailto:{{ . }}">{{ . }}</a>
-      {{ end }} {{ with $resume.basics.github }}
-      <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
+      {{ with $resume.basics.phone }}
+        <span class="resume-contact-item">{{ . }}</span>
+      {{ end }}
+      {{ with $resume.basics.email }}
+        <a class="resume-contact-item" href="mailto:{{ . }}">{{ . }}</a>
+      {{ end }}
+      {{ with $resume.basics.location }}
+        <span class="resume-contact-item">{{ . }}</span>
+      {{ end }}
+      {{ with $resume.basics.website }}
+        <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </div>
   </header>
 
+  {{ $summary := $resume.summary | default $resume.basics.summary }}
+  {{ with $summary }}
+    <section class="resume-section resume-section-summary">
+      <h2>{{ i18n "summary" }}</h2>
+      <p class="resume-summary">{{ . }}</p>
+    </section>
+  {{ end }}
+
   {{ with $resume.skills }}
-  <section class="skills-section">
-    <h2 class="skills-heading">{{ i18n "skills" }}</h2>
-    <ul class="skills-list">
-      {{ range . }}
-      <li>
-        <span class="skills-line">
-          {{ range $index, $item := .items }} {{ if $index }}
-          <span class="skills-separator" aria-hidden="true"> | </span>
-          {{ end }}
-          <span class="skills-token">{{ $item }}</span>
-          {{ end }} {{ with .note }}
-          <span class="skills-note"> - <em>{{ . }}</em></span>
-          {{ end }}
-        </span>
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }} {{ with $resume.summary }}
-  <section>
-    <h2>{{ i18n "summary" }}</h2>
-    <p>{{ . }}</p>
-  </section>
-  {{ end }} {{ with $resume.experience }}
-  <section>
-    <h2>{{ i18n "experience" }}</h2>
-    {{ range . }}
-    <article class="resume-entry">
-      <div class="resume-entry-heading">
-        <h3>{{ .role }}</h3>
-        <p class="resume-entry-org">{{ .company }}</p>
-      </div>
-      <p class="resume-entry-meta">
-        {{ .location }} | {{ .start }} - {{ .end }}
-      </p>
-      <ul>
-        {{ range .highlights }}
-        <li>{{ . }}</li>
+    <section class="resume-section resume-section-skills skills-section">
+      <h2 class="skills-heading">{{ i18n "skills" }}</h2>
+      <ul class="skills-list">
+        {{ range . }}
+          <li>
+            <span class="skills-line">
+              {{ with .label }}
+                <span class="skills-group-label">{{ . }}:</span>
+              {{ end }}
+              {{ range $index, $item := .items }}
+                {{ if $index }}
+                  <span class="skills-separator" aria-hidden="true"> | </span>
+                {{ end }}
+                <span class="skills-token">{{ $item }}</span>
+              {{ end }}
+              {{ with .note }}
+                <span class="skills-note"> - <em>{{ . }}</em></span>
+              {{ end }}
+            </span>
+          </li>
         {{ end }}
       </ul>
-    </article>
-    {{ end }}
-  </section>
-  {{ end }} {{ with $resume.education }}
-  <section>
-    <h2>{{ i18n "education" }}</h2>
-    {{ range . }}
-    <article class="resume-entry">
-      <div class="resume-entry-heading">
-        <h3>{{ .degree }}</h3>
-        <p class="resume-entry-org">{{ .institution }}</p>
-      </div>
-      <p class="resume-entry-meta">{{ .start }} - {{ .end }}</p>
-    </article>
-    {{ end }}
-  </section>
-  {{ end }} {{ with $resume.projects }}
-  <section>
-    <h2>{{ i18n "projects" }}</h2>
-    {{ range . }}
-    <article class="resume-entry">
-      <div class="resume-entry-heading">
-        <h3>
-          <a href="{{ .url }}">{{ .name }}</a>
-        </h3>
-      </div>
-      <p>{{ .description }}</p>
-    </article>
-    {{ end }}
-  </section>
-  {{ end }} {{ with $resume.languages }}
-  <section>
-    <h2>{{ i18n "languages" }}</h2>
-    <ul>
+    </section>
+  {{ end }}
+
+  {{ with $resume.experience }}
+    <section class="resume-section resume-section-experience">
+      <h2>{{ i18n "experience" }}</h2>
       {{ range . }}
-      <li>{{ .name }} ({{ .level }})</li>
+        <article class="resume-entry">
+          <div class="resume-entry-heading">
+            <h3>{{ .role }}</h3>
+            <p class="resume-entry-org">{{ .company }}</p>
+          </div>
+          <p class="resume-entry-meta">
+            {{ with .location }}
+              <span class="resume-entry-location">{{ . }}</span>
+            {{ end }}
+            {{ if and .location .start }}
+              <span class="resume-meta-separator" aria-hidden="true">|</span>
+            {{ end }}
+            <span class="resume-entry-dates">{{ .start }} - {{ .end }}</span>
+          </p>
+          <ul class="resume-highlights">
+            {{ range .highlights }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </article>
       {{ end }}
-    </ul>
-  </section>
+    </section>
+  {{ end }}
+
+  {{ with $resume.projects }}
+    <section class="resume-section resume-section-projects">
+      <h2>{{ i18n "projects" }}</h2>
+      {{ range . }}
+        {{ $project := . }}
+        <article class="resume-entry">
+          <div class="resume-entry-heading">
+            <h3>
+              {{ with $project.url }}
+                <a href="{{ . }}">{{ $project.name }}</a>
+              {{ else }}
+                {{ $project.name }}
+              {{ end }}
+            </h3>
+            {{ if or $project.start $project.end }}
+              <p class="resume-entry-timeline">
+                <span class="resume-entry-dates">
+                  {{ $project.start }} - {{ $project.end }}
+                </span>
+              </p>
+            {{ end }}
+          </div>
+          {{ with .description }}
+            <p class="resume-project-description">{{ . }}</p>
+          {{ end }}
+          {{ with .highlights }}
+            <ul class="resume-highlights">
+              {{ range . }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </article>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{ with $resume.education }}
+    <section class="resume-section resume-section-education">
+      <h2>{{ i18n "education" }}</h2>
+      {{ range . }}
+        <article class="resume-entry">
+          <div class="resume-entry-heading">
+            <h3>{{ .degree }}</h3>
+            <p class="resume-entry-org">{{ .institution }}</p>
+          </div>
+          <p class="resume-entry-meta">
+            <span class="resume-entry-dates">{{ .start }} - {{ .end }}</span>
+          </p>
+        </article>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{ with $resume.languages }}
+    <section class="resume-section resume-section-languages">
+      <h2>{{ i18n "languages" }}</h2>
+      <ul class="resume-languages">
+        {{ range . }}
+          <li>
+            <span class="resume-language-name">{{ .name }}</span>
+            <span class="resume-language-level">({{ .level }})</span>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
   {{ end }}
 </main>

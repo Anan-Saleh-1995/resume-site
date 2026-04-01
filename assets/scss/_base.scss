@@ -19,6 +19,26 @@ body {
   );
 }
 
+.site-shell {
+  width: min(100% - 2rem, 8.4in);
+  margin: 0 auto;
+}
+
+.site-header,
+.site-footer {
+  padding: var(--space-4) 0;
+}
+
+.site-header .site-shell,
+.site-footer .site-shell {
+  display: flex;
+}
+
+.site-header .site-shell {
+  direction: ltr;
+  justify-content: flex-end;
+}
+
 h1,
 h2,
 h3 {
@@ -32,16 +52,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
-  margin-bottom: var(--space-4);
+  font-size: 0.84rem;
+  margin-bottom: var(--space-3);
   color: var(--color-accent);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
 h3 {
-  font-size: 1.05rem;
-  margin-bottom: var(--space-2);
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 p {

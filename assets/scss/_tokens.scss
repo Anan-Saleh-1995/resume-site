@@ -10,9 +10,9 @@
   --color-overlay-border-dark: rgba(148, 163, 184, 0.18);
   --color-overlay-surface-dark: rgba(15, 23, 42, 0.88);
 
-  --font-body: 'Segoe UI', 'Helvetica Neue', arial, sans-serif;
+  --font-body: 'Segoe UI', tahoma, arial, sans-serif;
   --font-size-base: 16px;
-  --line-height-base: 1.6;
+  --line-height-base: 1.5;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -22,8 +22,8 @@
   --space-6: 2rem;
   --space-7: 3rem;
 
-  --radius: 18px;
-  --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --radius: 14px;
+  --shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
   --shadow-overlay: 0 8px 24px rgba(15, 23, 42, 0.08);
   --shadow-overlay-dark: 0 8px 24px rgba(2, 6, 23, 0.35);
 }

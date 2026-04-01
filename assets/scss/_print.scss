@@ -1,3 +1,8 @@
+@page {
+  size: a4;
+  margin: 0.42in 0.5in;
+}
+
 @media print {
   :root {
     --color-text: #000;
@@ -8,7 +13,8 @@
 
   body {
     background: #fff;
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.34;
   }
 
   main.template-classic {
@@ -20,17 +26,46 @@
     box-shadow: none;
   }
 
+  .site-header,
+  .site-footer,
   .site-controls {
     display: none;
   }
 
   .template-classic section {
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     break-inside: avoid;
   }
 
   .template-classic .resume-entry {
     break-inside: avoid;
+  }
+
+  .template-classic .resume-section-projects {
+    break-inside: auto;
+  }
+
+  .template-classic .resume-section-projects h2,
+  .template-classic .resume-section-projects .resume-entry-heading,
+  .template-classic .resume-section-projects .resume-entry-meta {
+    break-after: avoid;
+  }
+
+  .template-classic .resume-section-projects .resume-entry,
+  .template-classic .resume-section-projects .resume-highlights {
+    break-inside: auto;
+  }
+
+  .template-classic .resume-section-projects .resume-project-description {
+    display: none;
+  }
+
+  .template-classic .resume-section-projects .resume-highlights {
+    margin-top: 0.22rem;
+  }
+
+  .template-classic .resume-section-projects .resume-highlights li + li {
+    margin-top: 0.06rem;
   }
 
   .template-classic .skills-list li {
@@ -39,12 +74,86 @@
   }
 
   .template-classic h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
-  p,
-  li {
+  .template-classic .resume-title {
     font-size: 0.95rem;
+  }
+
+  .template-classic h2 {
+    font-size: 0.76rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .template-classic h3 {
+    font-size: 0.92rem;
+  }
+
+  .template-classic .resume-contact-list,
+  .template-classic p,
+  .template-classic li {
+    font-size: 0.86rem;
+  }
+
+  .template-classic .resume-header {
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .template-classic .resume-entry-meta {
+    margin-top: 0.05rem;
+    font-size: 0.78rem;
+  }
+
+  .template-classic .resume-summary,
+  .template-classic .resume-project-description,
+  .template-classic .resume-highlights li {
+    line-height: 1.3;
+  }
+
+  .template-classic .resume-highlights {
+    margin-top: 0.24rem;
+  }
+
+  .template-classic .resume-highlights li + li {
+    margin-top: 0.06rem;
+  }
+
+  .template-classic .skills-list li + li,
+  .template-classic ul li + li {
+    margin-top: 0.06rem;
+  }
+
+  .template-classic .resume-section-education,
+  .template-classic .resume-section-languages {
+    margin-top: 0.5rem;
+  }
+
+  .template-classic .resume-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.08rem 0.55rem;
+    margin-top: 0.06rem;
+  }
+
+  .template-classic .resume-languages li {
+    padding-inline-start: 0;
+    font-size: 0.84rem;
+    line-height: 1.22;
+  }
+
+  .template-classic .resume-languages li::before {
+    display: none;
+  }
+
+  .template-classic .resume-languages li + li {
+    margin-top: 0;
+  }
+
+  .template-classic .resume-languages li:not(:last-child)::after {
+    content: ' |';
+    color: var(--color-muted);
   }
 
   a {

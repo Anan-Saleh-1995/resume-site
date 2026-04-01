@@ -2,11 +2,23 @@
   justify-content: flex-start;
 }
 
-[dir='rtl'] .template-classic .resume-entry-meta,
 [dir='rtl'] .template-classic .resume-contact-list,
-[dir='rtl'] .template-classic p,
-[dir='rtl'] .template-classic li {
+[dir='rtl'] .template-classic .resume-summary,
+[dir='rtl'] .template-classic .resume-project-description,
+[dir='rtl'] .template-classic .resume-highlights li,
+[dir='rtl'] .template-classic section > ul li {
   unicode-bidi: plaintext;
+}
+
+[dir='rtl'] .template-classic .resume-entry-meta {
+  justify-content: flex-start;
+  text-align: right;
+  unicode-bidi: normal;
+}
+
+[dir='rtl'] .template-classic .resume-entry-stack {
+  margin-inline-start: auto;
+  text-align: right;
 }
 
 [dir='rtl'] .template-classic .skills-list li {

@@ -1,7 +1,11 @@
 @media (max-width: 640px) {
+  .site-shell {
+    width: min(100% - 1rem, 980px);
+  }
+
   main.template-classic {
     width: min(100% - 1rem, 980px);
-    margin: 4.5rem auto var(--space-4);
+    margin: var(--space-4) auto;
     padding: var(--space-4);
     border-radius: 12px;
   }
@@ -16,15 +20,8 @@
   }
 
   .site-controls {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: auto;
-    left: auto;
     gap: 0.4rem;
-    width: max-content;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-    max-width: none;
   }
 
   .language-switcher,

@@ -1,21 +1,11 @@
 .site-controls {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  bottom: auto;
-  left: auto;
-  z-index: 10;
   display: flex;
   direction: ltr;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
   gap: 0.5rem;
-  width: max-content;
 }
 
 .language-switcher {
-  position: static;
   display: flex;
   gap: 0.75rem;
   padding: 0.55rem 0.8rem;
@@ -25,7 +15,6 @@
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-overlay);
   font-size: 0.92rem;
-  order: 1;
 
   a {
     color: var(--color-muted);
@@ -52,8 +41,6 @@
   cursor: pointer;
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-overlay);
-  order: 2;
-  flex: 0 0 auto;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
