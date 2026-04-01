@@ -1,9 +1,6 @@
 [summary]
 other = "Summary"
 
-[links]
-other = "Links"
-
 [skills]
 other = "Skills"
 
@@ -15,3 +12,6 @@ other = "Education"
 
 [projects]
 other = "Projects"
+
+[languages]
+other = "Languages"

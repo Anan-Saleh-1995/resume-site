@@ -1,9 +1,6 @@
 [summary]
 other = "תקציר"
 
-[links]
-other = "קישורים"
-
 [skills]
 other = "כישורים"
 
@@ -15,3 +12,6 @@ other = "השכלה"
 
 [projects]
 other = "פרויקטים"
+
+[languages]
+other = "שפות"

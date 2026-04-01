@@ -38,20 +38,6 @@
   </section>
 
   <section>
-    <h2>{{ i18n "summary" }}</h2>
-    <p>{{ $resume.basics.summary }}</p>
-  </section>
-
-  <section>
-    <h2>{{ i18n "links" }}</h2>
-    <ul class="link-list">
-      {{ range $resume.links }}
-      <li><a href="{{ .url }}">{{ .label }}</a></li>
-      {{ end }}
-    </ul>
-  </section>
-
-  <section>
     <h2>{{ i18n "experience" }}</h2>
     {{ range $resume.experience }}
     <article class="resume-entry">
@@ -94,5 +80,14 @@
       <p>{{ .description }}</p>
     </article>
     {{ end }}
+  </section>
+
+  <section>
+    <h2>{{ i18n "languages" }}</h2>
+    <ul>
+      {{ range $resume.languages }}
+      <li>{{ .name }} ({{ .level }})</li>
+      {{ end }}
+    </ul>
   </section>
 </main>

@@ -16,12 +16,6 @@ basics:
     label: 'GitHub'
     url: 'https://github.com/yourname'
 
-links:
-  - label: 'GitHub'
-    url: 'https://github.com/yourname'
-  - label: 'LinkedIn'
-    url: 'https://linkedin.com/in/yourname'
-
 skills:
   - items:
       - 'TypeScript'
@@ -94,3 +88,11 @@ projects:
     url: 'https://example.com'
     description: >
       Short description of the project.
+
+languages:
+  - name: 'Arabic'
+    level: 'Mother language'
+  - name: 'Hebrew'
+    level: 'Fluent'
+  - name: 'English'
+    level: 'Fluent'

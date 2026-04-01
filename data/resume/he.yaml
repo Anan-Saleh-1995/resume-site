@@ -16,12 +16,6 @@ basics:
     label: 'GitHub'
     url: 'https://github.com/yourname'
 
-links:
-  - label: 'גיטהאב'
-    url: 'https://github.com/yourname'
-  - label: 'לינקדאין'
-    url: 'https://linkedin.com/in/yourname'
-
 skills:
   - items:
       - 'TypeScript'
@@ -94,3 +88,11 @@ projects:
     url: 'https://example.com'
     description: >
       תיאור קצר של הפרויקט.
+
+languages:
+  - name: 'ערבית'
+    level: 'שפת אם'
+  - name: 'עברית'
+    level: 'שוטף'
+  - name: 'אנגלית'
+    level: 'שוטף'
