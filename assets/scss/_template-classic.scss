@@ -12,6 +12,18 @@ main.template-classic {
     margin-top: var(--space-5);
   }
 
+  .resume-section-projects {
+    margin-top: calc(var(--space-5) + 0.1rem);
+  }
+
+  .resume-section-education {
+    margin-top: 1.25rem;
+  }
+
+  .resume-section-languages {
+    margin-top: 1rem;
+  }
+
   article + article {
     margin-top: var(--space-4);
   }
@@ -53,16 +65,23 @@ main.template-classic {
     color: inherit;
     text-decoration: none;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
 
     &:hover {
       color: var(--color-accent);
     }
 
-    & + .resume-contact-item::before {
+    &:not(.resume-contact-item-phone)
+      + .resume-contact-item:not(.resume-contact-item-phone)::before {
       content: '|';
       margin: 0 0.6rem;
       color: var(--color-border);
     }
+  }
+
+  .resume-contact-item-phone {
+    display: none;
   }
 
   section h2 {
