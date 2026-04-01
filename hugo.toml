@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://resume-site-6nui.vercel.app/"
 title = "Anan Resume"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
