@@ -3,7 +3,10 @@
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 <link rel="icon" href='{{ "favicon.svg" | relURL }}' type="image/svg+xml" />
 
-{{ $styles := resources.Get "css/main.css" | minify | fingerprint }} {{
-$siteScript := resources.Get "js/site.js" | minify | fingerprint }}
+{{ $themeBootstrap := resources.Get "js/theme/initiateTheme.js" | js.Build }}
+{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+{{ $siteScript := resources.Get "js/theme/themeControls.js" | js.Build | minify | fingerprint }}
+
+<script>{{ $themeBootstrap.Content | safeJS }}</script>
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 <script src="{{ $siteScript.RelPermalink }}"></script>
