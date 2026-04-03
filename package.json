@@ -6,6 +6,7 @@
   "scripts": {
     "build:css": "sass assets/scss/main.scss assets/css/main.css --no-source-map",
     "dev": "node scripts/run-hugo.cjs dev",
+    "dev:mobile": "node scripts/mobile-preview.cjs",
     "build": "node scripts/run-hugo.cjs build",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
+    "browser-sync": "^3.0.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "markdownlint-cli2": "^0.22.0",
