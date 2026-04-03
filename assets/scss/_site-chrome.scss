@@ -1,42 +1,10 @@
 body {
   min-height: 100vh;
   position: relative;
-  background:
-    radial-gradient(
-      circle at 12% 10%,
-      color-mix(in srgb, var(--color-accent) 10%, transparent) 0,
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 88% 3%,
-      color-mix(in srgb, var(--color-accent) 12%, transparent) 0,
-      transparent 28%
-    ),
-    linear-gradient(
-      180deg,
-      var(--color-bg) 0%,
-      color-mix(in srgb, var(--color-bg) 82%, var(--color-surface) 18%) 100%
-    );
+  background: var(--color-bg);
 
   &::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--color-text) 4%, transparent) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        180deg,
-        color-mix(in srgb, var(--color-text) 4%, transparent) 1px,
-        transparent 1px
-      );
-    background-size: 36px 36px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 72%);
-    opacity: 0.45;
+    content: none;
   }
 }
 
@@ -55,15 +23,10 @@ body {
   gap: var(--space-4);
   direction: ltr;
   padding: 1rem 1.1rem;
-  border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
+  border: 1px solid var(--color-border);
   border-radius: calc(var(--radius) + 8px);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-surface) 92%, var(--color-accent) 8%) 0%,
-    color-mix(in srgb, var(--color-surface) 98%, transparent) 100%
-  );
-  box-shadow: var(--shadow-chrome);
-  backdrop-filter: blur(14px);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
 }
 
 .site-brand {
@@ -181,6 +144,12 @@ body {
   font-weight: 600;
 }
 
+.latin-token {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .site-ribbon-separator {
   inline-size: 2.35rem;
   block-size: 1px;
@@ -193,14 +162,10 @@ body {
   justify-content: space-between;
   gap: var(--space-5);
   padding: 1.15rem 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
+  border: 1px solid var(--color-border);
   border-radius: calc(var(--radius) + 6px);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-surface) 96%, var(--color-accent) 4%) 0%,
-    color-mix(in srgb, var(--color-surface) 99%, transparent) 100%
-  );
-  box-shadow: var(--shadow-chrome);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
 }
 
 .site-footer-copy {

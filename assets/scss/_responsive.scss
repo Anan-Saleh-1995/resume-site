@@ -11,12 +11,12 @@
   }
 
   .site-header {
-    padding-bottom: var(--space-4);
+    padding: 0.75rem 0 0.9rem;
   }
 
   .site-masthead,
   .site-footer-card {
-    padding: 0.9rem;
+    padding: 0.8rem 0.9rem;
   }
 
   .site-masthead,
@@ -24,6 +24,7 @@
   .site-masthead-side {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-3);
   }
 
   .site-brand {
@@ -31,7 +32,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 0.65rem;
+    gap: 0.22rem;
+  }
+
+  .site-brand-copy {
+    gap: 0.05rem;
   }
 
   .site-brand-copy,
@@ -52,7 +57,7 @@
 
   .site-masthead-side {
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.2rem;
   }
 
   .site-nav,
@@ -77,7 +82,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 0.45rem;
+    margin-top: 0.2rem;
+    gap: 0.12rem;
+    padding: 0;
   }
 
   [dir='rtl'] .site-ribbon {
@@ -85,7 +92,7 @@
   }
 
   .site-ribbon-separator {
-    inline-size: 3.2rem;
+    inline-size: 2.2rem;
     margin-inline: 0;
   }
 
@@ -133,6 +140,35 @@
     margin: 0 0.35rem;
   }
 
+  .template-classic .resume-entry-heading,
+  .template-classic .resume-entry-meta,
+  .template-classic .resume-summary,
+  .template-classic .resume-project-description,
+  .template-classic .resume-highlights li,
+  .template-classic .resume-languages li,
+  .template-classic .skills-list li,
+  .template-classic .skills-line {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .template-classic .resume-entry-heading,
+  .template-classic .resume-entry-meta {
+    justify-content: center;
+  }
+
+  .template-classic .resume-highlights li,
+  .template-classic .resume-languages li,
+  .template-classic .skills-list li {
+    padding-inline-start: 0;
+  }
+
+  .template-classic .resume-highlights li::before,
+  .template-classic .resume-languages li::before,
+  .template-classic .skills-list li::before {
+    display: none;
+  }
+
   .language-switcher,
   .theme-toggle {
     padding: 0.4rem 0.6rem;
@@ -141,5 +177,76 @@
 
   .template-classic .skills-list li {
     white-space: normal;
+  }
+
+  .template-classic .skills-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem 0;
+  }
+
+  .template-classic .skills-group-label {
+    flex-basis: 100%;
+    display: block;
+    margin-inline-end: 0;
+    margin-bottom: 0.2rem;
+  }
+
+  [dir='rtl'] .template-classic .resume-entry-heading,
+  [dir='rtl'] .template-classic .resume-entry-meta {
+    justify-content: center;
+    text-align: center;
+  }
+
+  [dir='rtl'] .template-classic .resume-summary,
+  [dir='rtl'] .template-classic .resume-project-description,
+  [dir='rtl'] .template-classic .resume-highlights li,
+  [dir='rtl'] .template-classic .resume-languages li,
+  [dir='rtl'] .template-classic .skills-list li,
+  [dir='rtl'] .template-classic .skills-line {
+    text-align: center;
+  }
+
+  [dir='rtl'] .template-classic .skills-group-label {
+    text-align: center;
+    margin-inline-end: 0;
+  }
+
+  [dir='rtl'] .template-classic .skills-list {
+    text-align: center;
+  }
+
+  [dir='rtl']
+    .template-classic
+    section.resume-section-skills
+    > ul.skills-list
+    li,
+  [dir='rtl']
+    .template-classic
+    section.resume-section-skills
+    .skills-list
+    .skills-line {
+    text-align: center;
+    unicode-bidi: normal;
+  }
+
+  [dir='rtl'] .template-classic .skills-token,
+  [dir='rtl'] .template-classic .skills-separator,
+  [dir='rtl'] .template-classic .skills-note {
+    text-align: center;
+  }
+
+  [dir='rtl'] .site-footer-copy,
+  [dir='rtl'] .site-footer-actions,
+  [dir='rtl'] .site-footer-title,
+  [dir='rtl'] .site-footer-text,
+  [dir='rtl'] .site-footer-email {
+    text-align: center;
+  }
+
+  [dir='rtl'] .site-footer-actions {
+    justify-items: center;
   }
 }

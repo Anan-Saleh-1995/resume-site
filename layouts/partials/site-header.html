@@ -1,6 +1,7 @@
 {{ $page := .page }} {{ $resolved := .resolved }} {{ $name :=
 $resolved.resume.basics.name | default $page.Site.Title }} {{ $mark := substr
-$name 0 1 }}
+$name 0 1 }} {{ $ribbonCopy := i18n "siteRibbonCopy" }} {{ $ribbonCopy =
+replace $ribbonCopy "PDF" "<span class=\"latin-token\">PDF</span>" | safeHTML }}
 
 <header class="site-header">
   <div class="site-shell">
@@ -26,7 +27,7 @@ $name 0 1 }}
     <div class="site-ribbon">
       <span class="site-ribbon-title">{{ $page.Title }}</span>
       <span class="site-ribbon-separator" aria-hidden="true"></span>
-      <span class="site-ribbon-copy">{{ i18n "siteRibbonCopy" }}</span>
+      <span class="site-ribbon-copy">{{ $ribbonCopy }}</span>
     </div>
   </div>
 </header>

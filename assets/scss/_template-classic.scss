@@ -63,6 +63,7 @@ main.template-classic {
 
   .resume-contact-item {
     color: inherit;
+    -webkit-text-fill-color: var(--color-muted);
     text-decoration: none;
     white-space: nowrap;
     display: inline-flex;
@@ -138,6 +139,7 @@ main.template-classic {
   }
 
   .resume-entry-dates {
+    -webkit-text-fill-color: var(--color-muted);
     direction: ltr;
     unicode-bidi: isolate;
     white-space: nowrap;
