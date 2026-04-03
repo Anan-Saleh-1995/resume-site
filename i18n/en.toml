@@ -47,7 +47,7 @@ other = "This site mirrors the printable resume and makes it easy to review Engl
 other = "Contact by email"
 
 [siteFooterMeta]
-other = "Powered by Hugo · Copyright 2026 Anan Saleh"
+other = "Powered by Hugo · © %s Anan Saleh"
 
 [alternateResumeLinkLabel]
 other = "View Hebrew version online"

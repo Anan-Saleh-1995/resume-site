@@ -1,4 +1,5 @@
-{{ $resolved := .resolved }} {{ $email := $resolved.resume.basics.email }}
+{{ $resolved := .resolved }} {{ $email := $resolved.resume.basics.email }} {{
+$year := now.Format "2006" }}
 
 <footer class="site-footer">
   <div class="site-shell">
@@ -18,6 +19,6 @@
       </div>
       {{ end }}
     </div>
-    <p class="site-footer-meta">{{ i18n "siteFooterMeta" }}</p>
+    <p class="site-footer-meta">{{ printf (i18n "siteFooterMeta") $year }}</p>
   </div>
 </footer>

@@ -47,7 +47,7 @@ other = "האתר משקף את קובץ קורות החיים להדפסה ומ
 other = "יצירת קשר במייל"
 
 [siteFooterMeta]
-other = "מופעל על ידי Hugo · זכויות יוצרים 2026 ענאן סאלח"
+other = "מופעל על ידי Hugo · © %s ענאן סאלח"
 
 [alternateResumeLinkLabel]
 other = "לצפייה בגרסה האנגלית אונליין"
