@@ -3,6 +3,7 @@
 /resources
 /.hugo_build.lock
 assets/css/main.css
+assets/jsconfig.json
 .DS_Store
 Thumbs.db
 .env
