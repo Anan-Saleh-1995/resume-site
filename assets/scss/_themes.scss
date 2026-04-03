@@ -11,13 +11,14 @@
 }
 
 :root[data-theme='light'] {
-  --color-bg: #f5f7fb;
+  --color-bg: #f3f8ff;
   --color-surface: #fff;
   --color-text: #111827;
   --color-muted: #4b5563;
   --color-border: #d1d5db;
-  --color-accent: #0f766e;
-  --color-surface-tint: #d6e3f5;
+  --color-accent: #0b3b66;
+  --color-surface-tint: #e4f0fd;
+  --color-page-tint: #b8d4f3;
   --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
 }
 
@@ -27,7 +28,8 @@
   --color-text: #e5e7eb;
   --color-muted: #94a3b8;
   --color-border: #334155;
-  --color-accent: #67e8f9;
-  --color-surface-tint: #67e8f9;
+  --color-accent: #7fb3e6;
+  --color-surface-tint: #7fb3e6;
+  --color-page-tint: #7fb3e6;
   --shadow: 0 18px 50px rgba(2, 6, 23, 0.45);
 }
