@@ -51,6 +51,11 @@
     direction: ltr;
   }
 
+  [dir='rtl'] .site-ribbon-copy {
+    direction: rtl;
+    unicode-bidi: plaintext;
+  }
+
   [dir='rtl'] .site-brand-copy {
     text-align: center;
   }
