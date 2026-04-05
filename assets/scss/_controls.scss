@@ -57,6 +57,48 @@
   }
 }
 
+.site-github-link {
+  border: 1px solid var(--color-overlay-border);
+  border-radius: 999px;
+  background: var(--color-overlay-surface);
+  color: var(--color-text);
+  inline-size: 2.6rem;
+  block-size: 2.6rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-overlay);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+.site-github-link-icon {
+  display: grid;
+  place-items: center;
+
+  svg {
+    display: block;
+    inline-size: 1.05rem;
+    block-size: 1.05rem;
+    fill: currentcolor;
+  }
+}
+
 .theme-toggle-icon {
   grid-area: 1 / 1;
   display: grid;
@@ -94,7 +136,8 @@
 }
 
 :root[data-theme='dark'] .language-switcher,
-:root[data-theme='dark'] .theme-toggle {
+:root[data-theme='dark'] .theme-toggle,
+:root[data-theme='dark'] .site-github-link {
   background: var(--color-overlay-surface-dark);
   border-color: var(--color-overlay-border-dark);
   box-shadow: var(--shadow-overlay-dark);

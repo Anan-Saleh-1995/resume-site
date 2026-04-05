@@ -4,6 +4,9 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 disableKinds = ["taxonomy", "term"]
 
+[params]
+  githubRepo = "https://github.com/Anan-Saleh-1995/resume-site"
+
 [languages]
 
   [languages.en]

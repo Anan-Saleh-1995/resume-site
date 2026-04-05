@@ -341,6 +341,17 @@ body {
   text-align: center;
 }
 
+.site-footer-repo {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.55rem;
+}
+
+.site-github-link-footer {
+  inline-size: 2.4rem;
+  block-size: 2.4rem;
+}
+
 [dir='rtl'] .site-brand-copy,
 [dir='rtl'] .site-ribbon,
 [dir='rtl'] .site-footer-copy,

@@ -49,5 +49,8 @@ other = "יצירת קשר במייל"
 [siteFooterMeta]
 other = "מופעל על ידי Hugo · © %s ענאן סאלח"
 
+[siteGithubLabel]
+other = "צפייה בריפו ב-GitHub"
+
 [alternateResumeLinkLabel]
 other = "לצפייה בגרסה האנגלית אונליין"

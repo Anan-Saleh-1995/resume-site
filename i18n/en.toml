@@ -49,5 +49,8 @@ other = "Contact by email"
 [siteFooterMeta]
 other = "Powered by Hugo · © %s Anan Saleh"
 
+[siteGithubLabel]
+other = "View source on GitHub"
+
 [alternateResumeLinkLabel]
 other = "View Hebrew version online"
