@@ -1,7 +1,11 @@
-{{ $page := .page }} {{ $resolved := .resolved }} {{ $name :=
-$resolved.resume.basics.name | default $page.Site.Title }} {{ $mark := substr
-$name 0 1 }} {{ $ribbonCopy := i18n "siteRibbonCopy" }} {{ $ribbonCopy =
-replace $ribbonCopy "PDF" "<span class=\"latin-token\">PDF</span>" | safeHTML }}
+{{ $page := .page }}
+{{ $resolved := .resolved }}
+{{ $name := $resolved.resume.basics.name | default $page.Site.Title }}
+{{ $mark := substr $name 0 1 }}
+{{ $pdfToken := `<span class="latin-token">PDF</span>` }}
+{{ $ribbonCopy := i18n "siteRibbonCopy" }}
+{{ $ribbonCopy = replace $ribbonCopy "PDF" $pdfToken | safeHTML }}
+{{ $githubRepo := $page.Site.Params.githubRepo }}
 
 <header class="site-header">
   <div class="site-shell">
@@ -18,8 +22,11 @@ replace $ribbonCopy "PDF" "<span class=\"latin-token\">PDF</span>" | safeHTML }}
         {{ partial "site-nav.html" (dict "page" $page) }}
 
         <div class="site-controls">
-          {{ partial "language-switcher.html" $page }} {{ partial
-          "theme-toggle.html" $page }}
+          {{ partial "language-switcher.html" $page }}
+          {{ with $githubRepo }}
+            {{ partial "github-link.html" (dict "href" . "class" "site-github-link site-github-link-header") }}
+          {{ end }}
+          {{ partial "theme-toggle.html" $page }}
         </div>
       </div>
     </div>

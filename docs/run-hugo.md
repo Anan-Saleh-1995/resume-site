@@ -1,8 +1,8 @@
-<!-- markdownlint-disable MD024 -->
+﻿<!-- markdownlint-disable MD024 -->
 
 # `run-hugo.cjs` Explained Slowly
 
-This document explains [run-hugo.cjs](C:\Users\Anan\Desktop\hugo\scripts\run-hugo.cjs) in the smallest practical steps.
+This document explains [run-hugo.cjs](C:...\github\hugo\scripts\run-hugo.cjs) in the smallest practical steps.
 
 The goal is not just to say "what it does", but also:
 
@@ -117,7 +117,7 @@ This file keeps it in one place.
 
 ## How this script gets called
 
-From [package.json](C:\Users\Anan\Desktop\hugo\package.json):
+From [package.json](C:...\github\hugo\package.json):
 
 ```json
 "dev": "node scripts/run-hugo.cjs dev",
@@ -263,7 +263,7 @@ In Node, `__dirname` is the directory containing the current script file.
 For this file, it is approximately:
 
 ```text
-C:\Users\Anan\Desktop\hugo\scripts
+C:\...\github\hugo\scripts
 ```
 
 ### What `path.resolve(__dirname, '..')` does
@@ -273,13 +273,13 @@ It moves one folder up from `scripts`.
 So:
 
 ```text
-C:\Users\Anan\Desktop\hugo\scripts
+C:\...\github\hugo\scripts
 ```
 
 becomes:
 
 ```text
-C:\Users\Anan\Desktop\hugo
+C:\...\github\hugo
 ```
 
 ### Output
@@ -1196,7 +1196,7 @@ Pretend the terminal is currently at the repository root.
 So commands behave as if you ran them from:
 
 ```text
-C:\Users\Anan\Desktop\hugo
+C:\...\github\hugo
 ```
 
 ### `env`
@@ -1483,8 +1483,8 @@ process.argv = [
 ]
 
 [paths]
-repoRoot = C:\Users\Anan\Desktop\hugo
-envPath = C:\Users\Anan\Desktop\hugo\.env
+repoRoot = C:\...\github\hugo
+envPath = C:\...\github\hugo\.env
 
 [env]
 copied process.env into env
@@ -1535,8 +1535,8 @@ process.argv = [
 ]
 
 [paths]
-repoRoot = C:\Users\Anan\Desktop\hugo
-envPath = C:\Users\Anan\Desktop\hugo\.env
+repoRoot = C:\...\github\hugo
+envPath = C:\...\github\hugo\.env
 
 [env]
 copied process.env into env

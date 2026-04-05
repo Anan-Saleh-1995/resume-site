@@ -7,6 +7,8 @@
 {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
 {{ $siteScript := resources.Get "js/theme/themeControls.js" | js.Build | minify | fingerprint }}
 
-<script>{{ $themeBootstrap.Content | safeJS }}</script>
+<script>
+  {{ $themeBootstrap.Content | safeJS }}
+</script>
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 <script src="{{ $siteScript.RelPermalink }}"></script>

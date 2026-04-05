@@ -7,9 +7,10 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    {{ $resolved := partial "resume/resolve.html" . }} {{ .Scratch.Set
-    "resumeResolved" $resolved }} {{ partial "site-header.html" (dict "page" .
-    "resolved" $resolved) }} {{ block "main" . }}{{ end }} {{ partial
-    "site-footer.html" (dict "page" . "resolved" $resolved) }}
+    {{ $resolved := partial "resume/resolve.html" . }}
+    {{ .Scratch.Set "resumeResolved" $resolved }}
+    {{ partial "site-header.html" (dict "page" . "resolved" $resolved) }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "site-footer.html" (dict "page" . "resolved" $resolved) }}
   </body>
 </html>

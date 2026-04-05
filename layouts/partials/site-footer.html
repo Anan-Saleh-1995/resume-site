@@ -1,5 +1,7 @@
-{{ $resolved := .resolved }} {{ $email := $resolved.resume.basics.email }} {{
-$year := now.Format "2006" }}
+{{ $resolved := .resolved }}
+{{ $email := $resolved.resume.basics.email }}
+{{ $year := now.Format "2006" }}
+{{ $githubRepo := .page.Site.Params.githubRepo }}
 
 <footer class="site-footer">
   <div class="site-shell">
@@ -11,14 +13,19 @@ $year := now.Format "2006" }}
       </div>
 
       {{ with $email }}
-      <div class="site-footer-actions">
-        <a class="site-footer-cta" href="mailto:{{ . }}"
-          >{{ i18n "siteFooterCta" }}</a
-        >
-        <span class="site-footer-email">{{ . }}</span>
-      </div>
+        <div class="site-footer-actions">
+          <a class="site-footer-cta" href="mailto:{{ . }}">
+            {{ i18n "siteFooterCta" }}
+          </a>
+          <span class="site-footer-email">{{ . }}</span>
+        </div>
       {{ end }}
     </div>
     <p class="site-footer-meta">{{ printf (i18n "siteFooterMeta") $year }}</p>
+    {{ with $githubRepo }}
+      <div class="site-footer-repo">
+        {{ partial "github-link.html" (dict "href" . "class" "site-github-link site-github-link-footer") }}
+      </div>
+    {{ end }}
   </div>
 </footer>
