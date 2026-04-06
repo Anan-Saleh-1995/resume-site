@@ -3,6 +3,9 @@ basics:
   title: 'Full-Stack Developer'
   email: 'anansaleh18@gmail.com'
   phone: '052-247-1407'
+  website:
+    label: 'anansaleh.com'
+    url: 'https://www.anansaleh.com'
 
 summary: >
   Full-stack developer with 3 years of experience building and maintaining production web applications with React, Meteor, Node.js, MongoDB, and AWS. Delivered end-to-end features including 2FA, secure AWS S3 upload flows, role-based access strategies, cron-based automation, and performance improvements such as server-side pagination for data-heavy screens.

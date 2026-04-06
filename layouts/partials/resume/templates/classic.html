@@ -27,7 +27,7 @@
         <span class="resume-contact-item">{{ . }}</span>
       {{ end }}
       {{ with $resume.basics.website }}
-        <a class="resume-contact-item" href="{{ .url }}">{{ .label }}</a>
+        <a class="resume-contact-item" rel="noopener noreferrer" target="_blank" href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </div>
   </header>

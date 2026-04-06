@@ -3,6 +3,9 @@ basics:
   title: 'מפתח פול-סטאק'
   email: 'anansaleh18@gmail.com'
   phone: '052-247-1407'
+  website:
+    label: 'anansaleh.com'
+    url: 'https://www.anansaleh.com'
 
 summary: >
   מפתח פול-סטאק עם 3 שנות ניסיון בפיתוח ותחזוקה של אפליקציות web בפרודקשן, בעבודה עם React, Meteor, Node.js, MongoDB ו-AWS. ניסיון בפיתוח פיצ'רים מקצה לקצה, כולל 2FA, העלאות קבצים מאובטחות ל-AWS S3, מנגנוני הרשאות מבוססי תפקידים, אוטומציות מבוססות cron ושיפורי ביצועים כמו פג'ינציה בצד השרת למסכים עתירי נתונים.
