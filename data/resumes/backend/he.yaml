@@ -1,92 +1,90 @@
 basics:
   name: 'ענאן'
   title: 'מפתח בקאנד'
-  location: 'ישראל'
-  summary: >
-    כתוב כאן תקציר מקצועי ממוקד בקאנד.
-  email: 'your@email.com'
-  phone: '+972-00-000-0000'
-  website:
-    label: 'example.com'
-    url: 'https://example.com'
-  linkedin:
-    label: 'לינקדאין'
-    url: 'https://linkedin.com/in/yourname'
-  github:
-    label: 'GitHub'
-    url: 'https://github.com/yourname'
+  email: 'anansaleh18@gmail.com'
+  phone: '052-247-1407'
+
+summary: >
+  מפתח בקאנד עם 3 שנות ניסיון בפיתוח ותחזוקה של מערכות פרודקשן ב-Node.js על
+  גבי AWS. ניסיון בבניית תהליכי API מאובטחים, תשתיות העלאת קבצים ל-S3,
+  מנגנוני אימות והרשאות מבוססי תפקידים, שירותים מתוזמנים ושיפורי ביצועים
+  בצד השרת למסכים עתירי נתונים. עובד בנוחות בסביבות Linux עם Docker ובדיקות
+  מקצה לקצה להתנהגות בקאנד.
 
 skills:
-  - items:
-      - 'TypeScript'
-      - 'JavaScript'
+  - label: 'צד שרת'
+    items:
       - 'Node.js'
       - 'Express'
       - 'NestJS'
       - 'REST APIs'
       - 'OpenAPI'
       - 'Swagger'
-  - items:
-      - 'MongoDB'
-      - 'Mongoose'
+      - 'Authentication'
+  - label: 'שפות'
+    items:
+      - 'JavaScript'
+      - 'TypeScript'
+      - 'SQL'
+      - 'Bash'
+      - 'PowerShell'
+  - label: 'שכבת נתונים'
+    items:
       - 'MySQL'
-      - 'Knex'
+      - 'MongoDB'
       - 'Prisma'
       - 'Redis'
-      - 'Passport'
-      - 'Zod'
-      - 'Joi'
-  - items:
+      - 'Knex'
+  - label: 'ענן ופלטפורמה'
+    items:
+      - 'Docker'
+      - 'Docker Compose'
+      - 'AWS EC2'
+      - 'AWS S3'
+      - 'AWS IAM'
+      - 'Linux'
+      - 'SSH'
+  - label: 'בדיקות ותהליך עבודה'
+    items:
       - 'Jest'
       - 'Vitest'
       - 'Supertest'
-      - 'Unit Testing'
       - 'Integration Testing'
-      - 'Docker'
-      - 'Docker Compose'
-      - 'Prometheus'
-      - 'Grafana'
-      - 'AWS S3'
-      - 'EC2'
-      - 'IAM'
-  - items:
-      - 'Linux'
-      - 'WSL'
-      - 'Bash'
-      - 'PowerShell'
       - 'Git'
-      - 'GitHub'
-      - 'SSH'
-      - 'Postman'
       - 'Jira'
+      - 'Agile'
 
 experience:
-  - company: 'שם החברה'
-    role: 'מפתח בקאנד'
-    location: 'מרחוק'
-    start: '2023'
-    end: 'היום'
+  - company: 'Plasbit Ltd'
+    role: 'מפתח פול-סטאק'
+    location: 'יקנעם, ישראל'
+    start: '01/2022'
+    end: '03/2025'
     highlights:
-      - 'פיתחתי ותחזקתי שירותי בקאנד, APIs ואינטגרציות.'
-      - 'שיפרתי תהליכי פיתוח, כיסוי בדיקות וכלי דיפלוי.'
-
-education:
-  - institution: 'שם האוניברסיטה'
-    degree: 'תואר ראשון בתחום כלשהו'
-    start: '2018'
-    end: '2022'
+      - 'פיתוח ותחזוקה של APIs ופיצ׳רים בפרודקשן עבור plasbit.com ו-app.plasbit.com באמצעות Node.js, Meteor ו-MongoDB בסביבת מוצר חיה.'
+      - 'הובלת תהליך העלאות קבצים מאובטחות ל-AWS S3 מקצה לקצה, כולל מבנה אחסון מסודר, ולידציה בצד השרת, טיפול בתהליך ההעלאה וגישה לקבצים באמצעות signed URLs.'
+      - 'מימוש 2FA, תהליכי כניסה מבוססי email token, מניעת שימוש חוזר בטוקנים והפרדה מבוססת סביבה בין מערכות admin ו-user על גבי שרתי EC2.'
+      - 'בניית שירות בקאנד מתוזמן שסורק תוכן חדש, מייצר קובצי XML ו-image sitemap מפוצלים, מעלה אותם ל-AWS S3 ומבצע invalidation ל-CDN כדי לשמור על אינדוקס מעודכן.'
+      - 'שיפור ביצועים במסכים עתירי נתונים באמצעות פג׳ינציה בצד השרת, לצד פיתוח endpoints, בדיקות לוגיקה פנימית וכלי עזר לצוות תוך ביצוע code reviews למפתחים חיצוניים.'
 
 projects:
-  - name: 'Travel App'
-    url: 'https://example.com'
-    description: >
-      אפליקציית טיולים עם דגש על בקאנד, אימות משתמשים, אחסון, בדיקות,
-      תצפיות ואינטגרציות ענן.
+  - name: 'Travel Guide Platform'
+    start: '2025'
+    end: 'כיום'
+    highlights:
+      - 'פיתוח פלטפורמת travel פרטית עם APIs ב-Node.js ו-Express, יחד עם MySQL, Knex ו-Redis.'
+      - 'מימוש MFA, העלאות תמונות מאובטחות ל-AWS S3, אינטגרציית PayPal עם webhooks ותשתיות Docker עם Prometheus ו-Grafana לניטור.'
+
+education:
+  - institution: 'בית הספר הארצי להנדסאים בטכניון'
+    degree: 'הנדסאי תוכנה'
+    start: '10/2016'
+    end: '12/2018'
 
 languages:
   - name: 'ערבית'
     level: 'שפת אם'
   - name: 'עברית'
-    level: 'שוטף'
+    level: 'שוטפת'
   - name: 'אנגלית'
-    level: 'שוטף'
+    level: 'שוטפת'

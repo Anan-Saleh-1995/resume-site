@@ -1,7 +1,7 @@
 {
   "name": "hugo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bilingual Hugo resume site with reusable resume variants, RTL support, and print-friendly output.",
   "main": "index.js",
   "scripts": {
     "build:css": "sass assets/scss/main.scss assets/css/main.css --no-source-map",
@@ -29,7 +29,7 @@
     ]
   },
   "keywords": [],
-  "author": "",
+  "author": "Anan Saleh",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

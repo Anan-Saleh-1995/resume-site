@@ -1,91 +1,90 @@
 basics:
   name: 'Anan'
   title: 'Backend Developer'
-  location: 'Israel'
-  summary: >
-    Write a backend-focused professional summary here.
-  email: 'your@email.com'
-  phone: '+972-00-000-0000'
-  website:
-    label: 'example.com'
-    url: 'https://example.com'
-  linkedin:
-    label: 'LinkedIn'
-    url: 'https://linkedin.com/in/yourname'
-  github:
-    label: 'GitHub'
-    url: 'https://github.com/yourname'
+  email: 'anansaleh18@gmail.com'
+  phone: '052-247-1407'
+
+summary: >
+  Backend-focused developer with 3 years of experience building and maintaining
+  production web systems in Node.js on AWS. Delivered secure API flows, S3-backed
+  file pipelines, authentication and role-based access controls, scheduled
+  services, and backend performance improvements for data-heavy products.
+  Comfortable working in Linux environments with Docker and testing backend
+  behavior end to end.
 
 skills:
-  - items:
-      - 'TypeScript'
-      - 'JavaScript'
+  - label: 'Backend'
+    items:
       - 'Node.js'
       - 'Express'
       - 'NestJS'
       - 'REST APIs'
       - 'OpenAPI'
       - 'Swagger'
-  - items:
-      - 'MongoDB'
-      - 'Mongoose'
+      - 'Authentication'
+  - label: 'Languages'
+    items:
+      - 'JavaScript'
+      - 'TypeScript'
+      - 'SQL'
+      - 'Bash'
+      - 'PowerShell'
+  - label: 'Data Layer'
+    items:
       - 'MySQL'
-      - 'Knex'
+      - 'MongoDB'
       - 'Prisma'
       - 'Redis'
-      - 'Passport'
-      - 'Zod'
-      - 'Joi'
-  - items:
+      - 'Knex'
+  - label: 'Cloud / Platform'
+    items:
+      - 'Docker'
+      - 'Docker Compose'
+      - 'AWS EC2'
+      - 'AWS S3'
+      - 'AWS IAM'
+      - 'Linux'
+      - 'SSH'
+  - label: 'Quality / Workflow'
+    items:
       - 'Jest'
       - 'Vitest'
       - 'Supertest'
-      - 'Unit Testing'
       - 'Integration Testing'
-      - 'Docker'
-      - 'Docker Compose'
-      - 'Prometheus'
-      - 'Grafana'
-      - 'AWS S3'
-      - 'EC2'
-      - 'IAM'
-  - items:
-      - 'Linux'
-      - 'WSL'
-      - 'Bash'
-      - 'PowerShell'
       - 'Git'
-      - 'GitHub'
-      - 'SSH'
-      - 'Postman'
       - 'Jira'
+      - 'Agile'
 
 experience:
-  - company: 'Company Name'
-    role: 'Backend Developer'
-    location: 'Remote'
-    start: '2023'
-    end: 'Present'
+  - company: 'Plasbit Ltd'
+    role: 'Full-Stack Developer'
+    location: 'Yokneam, Israel'
+    start: 'Jan 2022'
+    end: 'Mar 2025'
     highlights:
-      - 'Built and maintained backend services, APIs, and integrations.'
-      - 'Improved developer workflows, testing coverage, and deployment tooling.'
-
-education:
-  - institution: 'University Name'
-    degree: 'B.Sc. in Something'
-    start: '2018'
-    end: '2022'
+      - 'Built and maintained backend APIs and production features for plasbit.com and app.plasbit.com using Node.js, Meteor, and MongoDB in a live product environment.'
+      - 'Owned secure AWS S3 upload flows end to end, including storage structure, server-side file validation, backend upload handling, and signed-URL-based file access.'
+      - 'Implemented 2FA, passwordless email-token login flows, token validation and reuse protection, and environment-driven separation between admin and user systems across EC2 deployments.'
+      - 'Built a scheduled backend service that scanned new content, generated segmented XML and image sitemaps, uploaded them to AWS S3, and invalidated CDN cache to keep indexed content current.'
+      - 'Improved performance on data-heavy screens by introducing server-side pagination and developed backend endpoints, utility-level tests, and internal tooling while reviewing outsourced code.'
 
 projects:
-  - name: 'Travel App'
-    url: 'https://example.com'
-    description: >
-      Backend-heavy travel application with authentication, storage, testing,
-      observability, and cloud integrations.
+  - name: 'Travel Guide Platform'
+    start: '2025'
+    end: 'Present'
+    highlights:
+      - 'Building a private multi-role travel platform with Node.js and Express APIs, MySQL, Knex, and Redis.'
+      - 'Implemented MFA, secure AWS S3 photo uploads, PayPal webhooks, and Docker-based local infrastructure with Prometheus and Grafana monitoring.'
+
+education:
+  - institution: 'Technion National School for Practical Engineers'
+    degree: 'Practical Software Engineering Diploma'
+    start: 'Oct 2016'
+    end: 'Dec 2018'
 
 languages:
   - name: 'Arabic'
-    level: 'Mother language'
+    level: 'Native'
   - name: 'Hebrew'
     level: 'Fluent'
   - name: 'English'
